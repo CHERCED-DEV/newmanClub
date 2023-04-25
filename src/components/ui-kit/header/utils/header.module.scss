@@ -1,0 +1,52 @@
+.header {
+    // Estilos para el header...
+  }
+  
+  .header__logo {
+    // Estilos para el logo...
+  }
+  
+  .header__logo-image {
+    // Estilos para la imagen del logo...
+  }
+  
+  .header__nav {
+    // Estilos para la navegación...
+  }
+  
+  .header__nav-list {
+    // Estilos para la lista de navegación...
+  }
+  
+  .header__nav-item {
+    // Estilos para los elementos de la lista de navegación...
+  }
+  
+  .header__about {
+    // Estilos para la sección "Acerca de"...
+  }
+  
+  .header__label {
+    // Estilos para la etiqueta...
+  }
+  
+  .header__images {
+    // Estilos para las imágenes...
+  }
+  
+  .header__image {
+    // Estilos para cada imagen...
+  }
+
+  :export {
+    header: header;
+    header__logo: headerLogo;
+    header__logo-image: headerLogoImage;
+    header__nav: headerNav;
+    header__nav-list: headerNavList;
+    header__nav-item: headerNavItem;
+    header__about: headerAbout;
+    header__label: headerLabel;
+    header__images: headerImages;
+    header__image: headerImag;
+  }
