@@ -8,9 +8,10 @@ export interface GroupOptionsDataProps {
 
 export interface GroupOptionsConfig {
     main_logo: ImgConfig;
-    description?: string;
     title: string;
-    cards: CardsEventsConfig[] | CardsNewsConfig[];
+    description?: string;
+    cards_events?: CardsEventsConfig[];
+    cards_news?: CardsNewsConfig[]
     button: string;
     invite?: string;
 }
@@ -43,6 +44,7 @@ export interface CardsNewsConfig {
     blog: {
         author: string,
         title: string,
+        description: string,
         botton: string;
     }
 }

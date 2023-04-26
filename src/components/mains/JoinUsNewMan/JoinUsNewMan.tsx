@@ -1,51 +1,52 @@
 import Image from 'next/image';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { JoinUsDataProps } from './utils/joinus.interface';
 
-export const JoinUsNewMan = () => {
+export const JoinUsNewMan: React.FC<JoinUsDataProps> = ({ join_us }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data: any) => {
         console.log(data);
     };
+    
     return (
         <main className="join-us">
             <section className="join-us__content">
-                <h1 className="join-us__title">{ }</h1>
-                <p className="join-us__description">{ }</p>
+                <h1 className="join-us__title">{join_us.main_title}</h1>
+                <p className="join-us__description">{join_us.description}</p>
                 <form className="join-us__form" onSubmit={handleSubmit(onSubmit)}>
                     <input className="join-us__input"
-                        type="text" placeholder="Nombre"
-                        {...register('name', { required: true })}
+                        type="text" placeholder={join_us.name.placeholder}
+                        {...register('name', { required: join_us.name.required })}
                     />
-                    {errors.name && <span className="join-us__error">Este campo es requerido</span>}
+                    {errors.name && <span className="join-us__error">{join_us.name.error}</span>}
                     <input className="join-us__input"
                         type="text"
-                        placeholder="Correo electrónico"
-                        {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
+                        placeholder={join_us.email.placeholder}
+                        {...register('email', { required: join_us.email.required, pattern: /^\S+@\S+$/i })}
                     />
-                    {errors.email && <span className="join-us__error">Este campo es requerido y debe ser un correo electrónico válido</span>}
+                    {errors.email && <span className="join-us__error">{join_us.email.error}</span>}
                     <input className="join-us__input"
                         type="text"
-                        placeholder="Número de teléfono"
-                        {...register('phone', { required: true })}
+                        placeholder={join_us.phone.error}
+                        {...register('phone', { required: join_us.phone.required })}
                     />
-                    {errors.phone && <span className="join-us__error">Este campo es requerido</span>}
+                    {errors.phone && <span className="join-us__error">{join_us.phone.error}</span>}
                     <textarea className="join-us__textarea"
-                        placeholder="Mensaje"
-                        {...register('message', { required: true })}>
-
+                        placeholder={join_us.message.placeholder}
+                        {...register('message', { required: join_us.message.required })}>
                     </textarea>
-                    {errors.message && <span className="join-us__error">Este campo es requerido</span>}
-                    <button className="join-us__button" type="submit">Enviar</button>
+                    {errors.message && <span className="join-us__error">{join_us.message.error}</span>}
+                    <button className="join-us__button" type="submit">{join_us.button}</button>
                 </form>
             </section>
             <section className="join-us__image">
                 <Image
-                    src="/ruta-de-la-imagen"
-                    alt="Imagen de unirse a nuestro equipo"
-                    width={800}
-                    height={600}
+                    src={join_us.promo.src}
+                    alt={join_us.promo.alt}
+                    width={join_us.promo.width}
+                    height={join_us.promo.height}
                 />
             </section>
         </main>

@@ -2,7 +2,7 @@ import { ImgConfig } from "@/pages/api/customCms/database/utils.interface";
 
 export interface SoundtrackConfig {
     man: ImgConfig;
-    title: string;
+    title: string[];
     music_list: ImgConfig;
 }
 
