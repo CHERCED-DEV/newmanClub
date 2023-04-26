@@ -1,7 +1,9 @@
 import { ImgConfig } from "@/pages/api/customCms/database/utils.interface";
 
+
+// group options
 export interface GroupOptionsDataProps {
-    gData: GroupOptionsConfig;
+    gData: GroupOptionsConfig | MemoriesConfig;
 }
 
 export interface GroupOptionsConfig {
@@ -11,6 +13,11 @@ export interface GroupOptionsConfig {
     cards: CardsEventsConfig[] | CardsNewsConfig[];
     button: string;
     invite?: string;
+}
+// memories 
+
+export interface MemoriesConfig extends Omit<GroupOptionsConfig, 'description' | 'title'| 'cards' | 'invite' > {
+    basic_cards: ImgConfig[],
 }
 
 // cards config 
