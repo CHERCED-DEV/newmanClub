@@ -4,49 +4,108 @@
 
 // newmanBrand
 
-.footer_newMan_rm {
+.footerNewManRm {
 
 }
 
-.footer_newMan_img {
+.footerNewManImg {
 
 }
 
-.footer_newMan_description {
+.footerNewManDescription {
 
 }
 
 // newsletter
 
-.footer_newsLetter {
+.footerNewsLetter {
 
 }
 
-.footer_newsLetter_title {
+.footerNewsLetterTitle {
 
 }
 
-.footer_newsLetter__form {
+.footerNewsLetterForm {
 
 }
 
-.footer_newsLetter_input {
+.footerNewsLetterInput {
 
 }
 
-.footer_newsLetter_submit {
+.footerNewsLetterSubmit {
 
+}
+
+//contactMe
+
+.footerContactMe {
+
+}
+
+.footerContactMeChanels {
+
+}
+
+.footerContactMeChanelsItem {
+
+}
+
+.footerContactMeChanelsImg {
+
+}
+
+.footerContactMeChanelsLabel {
+
+}
+
+.footerContactMeSocialMedia {
+
+}
+
+.footerContactMeSocialMediaItem {
+    
+}
+
+.footerContactMeSocialMediaImg {
+    
+}
+
+// copyright
+
+.footerCopyRigth {
+
+}
+
+.footerCopyRigthTerms {
+    
+}
+
+.footerCopyRigthPoweredBy {
+    
 }
 
 
 :export {
     footer:footer;
-    footer_newMan_rm: footerNewManRm; 
-    footer_newMan_img: footerNewManImg;
-    footer_newMan_description: footerNewManDescription;
-    footer_newsLetter: footerNewsLetter;
-    footer_newsLetter_title: footerNewsLetterTitle;
-    footer_newsLetter__form: footerNewsLetterForm;
-    footer_newsLetter_input: footerNewsLetterInput;
-    footer_newsLetter_submit: footerNewsLetterSubmit
+    footerNewManRm: footerNewManRm; 
+    footerNewManImg: footerNewManImg;
+    footerNewManDescription: footerNewManDescription;
+    footerNewsLetter: footerNewsLetter;
+    footerNewsLetterTitle: footerNewsLetterTitle;
+    footerNewsLetterForm: footerNewsLetterForm;
+    footerNewsLetterInput: footerNewsLetterInput;
+    footerNewsLetterSubmit: footerNewsLetterSubmit;
+    footerContactMe: footerContactMe;
+    footerContactMeChanels: footerContactMeChanels;
+    footerContactMeChanelsItem: footerContactMeChanelsItem;
+    footerContactMeChanelsImg: footerContactMeChanelsImg;
+    footerContactMeChanelsLabel: footerContactMeChanelsLabel;
+    footerContactMeSocialMedia: footerContactMeSocialMedia;
+    footerContactMeSocialMediaItem: footerContactMeSocialMediaItem;
+    footerContactMeSocialMediaImg: footerContactMeSocialMediaImg;
+    footerCopyRigth: footerCopyRigth;
+    footerCopyRigthTerms: footerCopyRigthTerms;
+    footerCopyRigthPoweredBy: footerCopyRigthPoweredBy;   
 }

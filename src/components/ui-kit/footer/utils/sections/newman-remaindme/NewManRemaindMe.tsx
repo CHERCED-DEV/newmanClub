@@ -3,7 +3,7 @@ import React from 'react';
 import { NewManDataProps } from './utils/NewManRM.interface';
 import styles from '../../footer.module.scss';
 
-export const NewManRemaindMe: React.FC<NewManDataProps> = ({newmanRM}) => {
+const NewManRemaindMe: React.FC<NewManDataProps> = ({newmanRM}) => {
     return (
         <section className={styles.footerNewManRm}>
             <div className={styles.footerNewManImg}>
@@ -19,3 +19,6 @@ export const NewManRemaindMe: React.FC<NewManDataProps> = ({newmanRM}) => {
         </section>
     )
 }
+
+
+export default NewManRemaindMe;

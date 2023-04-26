@@ -1,13 +1,18 @@
-import { ImgConfig } from "@/pages/api/customCms/models/utils.interface";
+import { ImgConfig } from "@/pages/api/customCms/database/utils.interface";
+
+interface OptionsHeaderConfig {
+    label: string,
+    link: string,
+}
 
 export interface HeaderConfig {
     newman_logo: ImgConfig,
-    options: string[],
+    options: OptionsHeaderConfig[],
     about: {
         church_name: string,
-        social_one: ImgConfig,
-        social_two: ImgConfig,
-    }
+        social_Logo: ImgConfig[],
+    },
+    menu_mobile: ImgConfig
 }
 
 export interface HeaderDataProps {

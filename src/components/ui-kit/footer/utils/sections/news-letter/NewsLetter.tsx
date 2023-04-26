@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../footer.module.scss';
 import { NewsLetterDataProps } from './utils/newsletter.interface';
 
-export const NewsLetter: React.FC<NewsLetterDataProps> = ({ newsletter }) => {
+const NewsLetter: React.FC<NewsLetterDataProps> = ({ newsletter }) => {
     return (
         <section className={styles.footerNewsLetter}>
             <h1 className={styles.footerNewsLetterTitle}>{newsletter.title}</h1>
@@ -13,3 +13,5 @@ export const NewsLetter: React.FC<NewsLetterDataProps> = ({ newsletter }) => {
         </section>
     )
 }
+
+export default NewsLetter;
