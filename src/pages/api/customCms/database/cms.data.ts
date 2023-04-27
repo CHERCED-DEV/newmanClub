@@ -233,12 +233,6 @@ export const cms: CmsDataConfig = {
             "Roman Catholic Campus Ministry is sponsored by the Archdiocese of Hartford Campus Ministry Office and Trinity College’s Office of Spiritual and Religious Life. It brings a vitally important dimension to life at Trinity College."
         ],
         button: "Learn more",
-        crew_img: {
-            src: "",
-            alt: "",
-            width: 0,
-            height: 0
-        },
         group_options: [
             {
                 img: {
@@ -270,7 +264,13 @@ export const cms: CmsDataConfig = {
                 users: "173",
                 description: "The whole crew"
             },
-        ]
+        ],
+        crew_img: {
+            src: "/assets/imgs/memories/teamSix-memories.png",
+            alt: "church pix",
+            width: 398,
+            height: 529
+        },
     },
     whats_news: {
         main_logo: {

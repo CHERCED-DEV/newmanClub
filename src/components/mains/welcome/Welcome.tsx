@@ -31,37 +31,39 @@ export const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
 
     return (
         <>
-            <div className="welcome">
-                {wideScreen ? (
-                    <video ref={videoRef} width={640} height={360} autoPlay className="welcome__video">
-                        <source src={welcome.video.dsk.src} type="video/mp4" />
-                        {welcome.video.dsk.alert}<code>video</code>.
-                    </video>
-                ) : (
-                    <video ref={videoRef} width={320} height={180} autoPlay className="welcome__video">
-                        <source src={welcome.video.mob.src} type="video/mp4" />
-                        {welcome.video.mob.alert}<code>video</code>.
-                    </video>
-                )}
-                <button onClick={togglePlay} className="welcome__play">
-                    {playing ? (
-                        <Image
-                            src={welcome.button.onPlay.src}
-                            alt={welcome.button.onPlay.alt}
-                            width={welcome.button.onPlay.width}
-                            height={welcome.button.onPlay.height}
-                        />
+            <main>
+                <section className="welcome">
+                    {wideScreen ? (
+                        <video ref={videoRef} autoPlay className="welcome__video">
+                            <source src={welcome.video.dsk.src} type="video/mp4" />
+                            {welcome.video.dsk.alert}<code>video</code>.
+                        </video>
                     ) : (
-                        <Image
-                            src={welcome.button.onPause.src}
-                            alt={welcome.button.onPause.alt}
-                            width={welcome.button.onPause.width}
-                            height={welcome.button.onPause.height}
-                        />
+                        <video ref={videoRef} autoPlay className="welcome__video">
+                            <source src={welcome.video.mob.src} type="video/mp4" />
+                            {welcome.video.mob.alert}<code>video</code>.
+                        </video>
                     )}
-                </button>
-            </div>
-            <JoinUs join_us={welcome.join_us} />
+                    <button onClick={togglePlay} className="welcome__play">
+                        {playing ? (
+                            <Image
+                                src={welcome.button.onPlay.src}
+                                alt={welcome.button.onPlay.alt}
+                                width={welcome.button.onPlay.width}
+                                height={welcome.button.onPlay.height}
+                            />
+                        ) : (
+                            <Image
+                                src={welcome.button.onPause.src}
+                                alt={welcome.button.onPause.alt}
+                                width={welcome.button.onPause.width}
+                                height={welcome.button.onPause.height}
+                            />
+                        )}
+                    </button>
+                </section>
+                <JoinUs join_us={welcome.join_us} />
+            </main>
         </>
     );
 };

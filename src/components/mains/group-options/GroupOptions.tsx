@@ -4,15 +4,16 @@ import { GroupOptionsConfig, GroupOptionsDataProps } from './utils/groupoptions.
 import { CardGroup } from './utils/CardGroup';
 
 export const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
-    const [type, setType] = useState<boolean>(true);
+    const [type, setType] = useState<boolean>();
     const [groupDataHandler, setGroupDataHandler] = useState<GroupOptionsConfig>()
     console.log(gData)
 
     useEffect(() => {
         const typeValidator = () => {
-            if ((gData.invite !== undefined)) {
+            if ((gData.title === 'Events')) {
                 // CardsEventsConfig
                 setGroupDataHandler(gData);
+                setType(true);
             } else {
                 // CardsNewsConfig
                 setGroupDataHandler(gData);
@@ -21,6 +22,10 @@ export const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
         };
         typeValidator();
     }, [gData]);
+
+    if (type !== null) {
+
+    }
 
     return (
         <>
@@ -46,21 +51,24 @@ export const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                                         <>
                                             {
                                                 groupDataHandler?.cards?.map((card) => (
-                                                    <CardGroup
-                                                        key={card.background_img.src}
-                                                        card={card}
-                                                    />
+                                                    <li key={card.background_img.src} className='events__item'>
+                                                        <CardGroup
+                                                            card={card}
+                                                        />
+                                                    </li>
                                                 ))
+
                                             }
                                         </>
                                     ) : (
                                         <>
                                             {
                                                 groupDataHandler?.cards?.map((card) => (
-                                                    <CardGroup
-                                                        key={card.background_img.src}
-                                                        card={card}
-                                                    />
+                                                    <li key={card.background_img.src} className='whatsNews__item'>
+                                                        <CardGroup
+                                                            card={card}
+                                                        />
+                                                    </li>
                                                 ))
                                             }
                                         </>

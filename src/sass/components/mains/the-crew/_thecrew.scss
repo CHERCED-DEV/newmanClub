@@ -34,12 +34,52 @@
     margin-bottom: calculateRem(20px);
     line-height: 1.3;
 }
+
 .the-crew__cta {
-    @include regularButton($w:210px, $h:41px);
+    @include regularButton($w: 210px, $h: 41px);
     text-align: center;
     margin-top: calculateRem(16px);
     margin-left: calculateRem(-19px);
 }
+
+.group-options {
+    @include container-wrap();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: calculateRem(90px);
+}
+
+.group-options-container {
+    max-width: calculateRem(315px);
+    width: 100%;
+    background-color: $c-groupotions-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: calculateRem(21px);
+    box-shadow: $border-regular;
+}
+
 .group-options-crew {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid $c-brand-primary;
+    width: 100%;
+    max-width: calculateRem(180px);
+    &:last-child {
+        border: none;
+    }
+}
+.group-options-crew__title {
+    @include font-size(63px);
+    font-family: $f-body;
+    font-weight: $f-weight-bold;
+    color: $c-brand-secundary;
+}
+.group-options-crew__description {
+    text-align: center;
+    color: $c-brand-primary;
 }

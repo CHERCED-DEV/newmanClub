@@ -1,11 +1,3 @@
-.bg-wn {
-    width: calculateRem(428px);
-    height: calculateRem(172px);
-    background-image: url("../../../../../public/assets/utils/bg-nw.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 .whatsNews {
     @include container-wrap();
     display: flex;
