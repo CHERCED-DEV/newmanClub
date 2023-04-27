@@ -43,10 +43,17 @@
     &:last-child {
         text-align: right;
         margin-right: calculateRem(10px);
+        
     }
 }
 .soundtrack__pl-pic {
     
+}
+
+@media screen and (max-width: calculateRem(365px)) {
+    .soundtrack__title:last-child {
+            @include font-size($f-size-xxlg);
+        }
 }
 
 @-webkit-keyframes soundtrack-bg {
