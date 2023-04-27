@@ -88,8 +88,6 @@
     border-radius: calculateRem(30px);
     box-shadow: $border-regular;
     object-fit: cover;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .card__news-blog {
@@ -109,6 +107,11 @@
     @include font-size($f-size-lg);
     font-family: $f-button;
     font-weight: $f-weight-bold;
+    width: calculateRem(200px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-align: center;
 }
 
 .card__news-description {
