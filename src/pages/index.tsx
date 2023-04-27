@@ -20,7 +20,7 @@ export default function Home({ cmsData }: { cmsData: CmsDataConfig }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Welcome welcome={cmsData.welcome}/>
+            {/* <Welcome welcome={cmsData.welcome}/> */}
             {/* <GroupOptions gData={cmsData.events}/> */}
             <TheCrew the_crew={cmsData.the_crew}/>
             <GroupOptions gData={cmsData.whats_news} />
