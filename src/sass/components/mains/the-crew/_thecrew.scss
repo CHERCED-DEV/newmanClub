@@ -1,0 +1,45 @@
+.the-crew {
+    @include container-wrap();
+    padding-top: calculateRem(78px);
+    padding-bottom: calculateRem(78px);
+}
+
+.the-crew__intro {
+    border-left: 3px solid $c-brand-secundary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: calculateRem(20px);
+    color: $input-color2;
+}
+
+.the-crew__title {
+    width: 100%;
+    @include font-size(57px);
+    color: $c-brand-primary;
+    font-weight: $f-weight-normal;
+    text-align: left;
+
+    &::after {
+        content: 'crew.';
+        color: $c-brand-secundary;
+        font-weight: $f-weight-bold;
+        margin-left: calculateRem(17px);
+    }
+}
+
+.the-crew__description {
+    @include font-size($f-size-sm);
+    margin-right: calculateRem(37px);
+    margin-bottom: calculateRem(20px);
+    line-height: 1.3;
+}
+.the-crew__cta {
+    @include regularButton($w:210px, $h:41px);
+    text-align: center;
+    margin-top: calculateRem(16px);
+    margin-left: calculateRem(-19px);
+}
+.group-options-crew {
+    display: none;
+}

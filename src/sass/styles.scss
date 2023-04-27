@@ -11,6 +11,10 @@ ul,ol {
     list-style: none;
 }
 
+body {
+    background-color: $c-memories-bg-b;
+}
+
 h1,
 h2,
 h3,
@@ -27,13 +31,6 @@ p {
     display: none;
 }
 
-.bgforms {
-    background-image: url("../../public/assets/utils/fottermob.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-    padding: 60px;
-}
 
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com

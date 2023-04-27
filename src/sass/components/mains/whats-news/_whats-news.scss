@@ -1,0 +1,121 @@
+.bg-wn {
+    width: calculateRem(428px);
+    height: calculateRem(172px);
+    background-image: url("../../../../../public/assets/utils/bg-nw.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.whatsNews {
+    @include container-wrap();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #215888, #27B7AF);
+    clip-path: ellipse(185% 50% at 50% 50%);
+    padding-top: calculateRem(20px);
+    color: $default-text1;
+}
+
+.whatsNews__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: calculateRem(90px);
+}
+
+.whatsNews__header-title {
+    @include font-size(42px);
+    color: $c-brand-secundary;
+    font-weight: $f-weight-light;
+    &::after {
+        content: "new";
+        color: $default-text1;
+        font-weight: $f-weight-bold;
+        margin-left: calculateRem(15px);
+    }
+}
+
+.whatsNews__header-description {
+    margin: calculateRem(28px) calculateRem(20px)  calculateRem(34px) ;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.whatsNews__list {
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calculateRem(20px);
+    position: relative;
+}
+
+.card__news-date {
+    position: absolute;
+    width: calculateRem(98px);
+    height: calculateRem(175px);
+    background-color: $c-brand-secundary;
+    border-radius: 0 0 calculateRem(12px) calculateRem(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: $font-name-tercery;
+    margin-left: calculateRem(24px);
+}
+
+.card__news-day {
+    @include font-size($f-size-xxlg);
+    font-weight: $f-weight-bold;
+}
+
+.card__news-gtm {
+    @include font-size($f-size-lg);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calculateRem(24px);
+
+}
+
+.card-pic {
+    width: calculateRem(354px);
+    height: calculateRem(338px);
+    border-radius: calculateRem(30px);
+    box-shadow: $border-regular;
+    object-fit: cover;
+}
+
+.card__news-blog {
+    position: absolute;
+    bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card__news-author {
+    @include font-size($f-size-sm);
+}
+
+.card__news-title {
+    @include font-size($f-size-lg);
+    font-family: $f-button;
+    font-weight: $f-weight-bold;
+}
+
+.card__news-description {
+    display: none;
+}
+
+.card__news-button {
+    display: none;
+}
+.whatsNews__footer-button {
+    @include regularButton($w:210px, $h:41px);
+    margin-top: calculateRem(15px);
+    margin-bottom: calculateRem(90px);
+}

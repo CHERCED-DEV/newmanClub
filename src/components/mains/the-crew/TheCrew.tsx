@@ -8,7 +8,7 @@ export const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
         <>
             <main className='the-crew'>
                 <section className='the-crew__intro'>
-                    <h2 className='the-crew__title'>{the_crew.title}</h2>
+                <h2 className='the-crew__title'>{the_crew.title}</h2>
                     {
                         the_crew.description.map((dest) => (
                             <p key={dest} className='the-crew__description'>{dest}</p>

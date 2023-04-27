@@ -177,7 +177,7 @@ export const cms: CmsDataConfig = {
             height: 30.22,
         },
         title: "Events",
-        cards_events: [
+        cards: [
             {
                 background_img: {
                     src: "/assets/logos/church-logo.svg",
@@ -280,7 +280,8 @@ export const cms: CmsDataConfig = {
             height: 30.22,
         },
         title: "What's",
-        cards_news: [
+        description: "Find out about the latest news about our club.",
+        cards: [
             {
                 background_img: {
                     src:"/assets/imgs/w-news/pic1.jpg",
@@ -367,42 +368,43 @@ export const cms: CmsDataConfig = {
             width: 55.27,
             height: 30.22,
         },
-        basic_cards: [
+        title: "Memories",
+        cards: [
             {
                 src: "/assets/imgs/memories/teamOne-memories.png",
                 alt: "nice people meet",
-                width: 10,
-                height: 10
+                width: 398,
+                height: 529
             },
             {
                 src: "/assets/imgs/memories/teamTwo-memories.png",
                 alt: "nice people meet",
-                width: 10,
-                height: 10
+                width: 398,
+                height: 529
             },
             {
                 src: "/assets/imgs/memories/teamThree-memories.png",
                 alt: "nice people meet",
-                width: 10,
-                height: 10
+                width: 398,
+                height: 529
             },
             {
                 src: "/assets/imgs/memories/teamFour-memories.png",
                 alt: "nice people meet",
-                width: 10,
-                height: 10
+                width: 398,
+                height: 529
             },
             {
                 src: "/assets/imgs/memories/teamFive-memories.png",
                 alt: "nice people meet",
-                width: 10,
-                height: 10
+                width: 398,
+                height: 529
             },
             {
                 src: "/assets/imgs/memories/teamSix-memories.png",
                 alt: "nice people meet",
-                width: 10,
-                height: 10
+                width: 398,
+                height: 529
             }
         ],
         button: "More memories"

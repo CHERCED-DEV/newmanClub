@@ -11,6 +11,7 @@
     -webkit-animation: soundtrack-bg 25s ease infinite;
     -moz-animation: soundtrack-bg 25s ease infinite;
     animation: soundtrack-bg 25s ease infinite;
+    position: relative;
 }
 .soundtrack__pl-pic {
     margin-top: calculateRem(75px);
@@ -31,7 +32,7 @@
 .soundtrack__title-container {
     @include container-wrap();
     position: absolute;
-    bottom: calculateRem(-246px);
+    bottom: calculateRem(28px);
     
 }
 .soundtrack__title {
