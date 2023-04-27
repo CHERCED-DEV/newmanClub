@@ -3,6 +3,8 @@
 .header {
     background-color: $main-header;
     max-height: calculateRem(91px);
+    position: fixed;
+    z-index: $button-scrolltop-zindex;
 }
 
 .headerContainer {
