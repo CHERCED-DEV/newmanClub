@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .memories {
     @include container-wrap();
     display: flex;
@@ -13,14 +14,17 @@
     background-color: $c-memories-bg-b;
     padding-top: calculateRem(68px);
 }
+
 .memories__header {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     img {
         width: calculateRem(46px);
     }
 }
+
 .memories__header-title {
     @include font-size(42px);
     color: $c-brand-primary;
@@ -28,6 +32,7 @@
     margin-bottom: calculateRem(28px);
     line-height: 1;
 }
+
 .memories__list {
     width: 100%;
 }
@@ -35,6 +40,8 @@
 .memories__item {
     display: flex;
     flex-wrap: wrap;
+    min-width: 200px;
+    max-width: 398px;
 
     img {
         object-fit: cover;
@@ -42,26 +49,27 @@
         height: auto;
         border-radius: calculateRem(24px);
         box-shadow: $border-regular;
+        width: 100%;
+        height: 180px;
+    }
 
-        // Para imágenes impares
-        &:nth-child(odd) {
-            width: 64%;
-        }
-
-        // Para imágenes pares
-        &:nth-child(even) {
-            width: 30%;
-        }
-
-        // Para el quinto y tercer elemento de cada grupo de 5 elementos
-        &:nth-child(5n + 3) {
-            width: calc(100%);
-        }
+    img:nth-child(1),
+    img:nth-child(2) {
+        flex-grow: 1;
+        max-width: 46%;
+    }
+    img:nth-child(3) {
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    img:nth-child(4),
+    img:nth-child(5) {
+        flex-grow: 1;
+        max-width: 46%;
     }
 }
 
 .memories__button {
-    @include regularButton($w:210px, $h: 41px, $bg:$secundary-button);
+    @include regularButton($w: 210px, $h: 41px, $bg: $secundary-button);
     margin: calculateRem(25px) 0 calculateRem(76px);
 }
-
