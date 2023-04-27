@@ -20,7 +20,9 @@ export const Layout: React.FC<LayOutDataProps> = ({ children }) => {
                     <>
                     <Suspense fallback={<div>loading</div>}>
                         <Header header={layout.header} />
-                        {children}
+                        <main className="PAGE-WRAPER">
+                            {children}
+                        </main>
                         <Footer footer={layout.footer} />
                     </Suspense>
                     </>

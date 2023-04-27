@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { memo } from 'react';
 import { useForm } from 'react-hook-form';
 import { JoinUsDataProps } from './utils/joinus.interface';
 
-export const JoinUsNewMan: React.FC<JoinUsDataProps> = ({ join_us }) => {
+const JoinUsNewMan: React.FC<JoinUsDataProps> = ({ join_us }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data: any) => {
@@ -43,6 +43,7 @@ export const JoinUsNewMan: React.FC<JoinUsDataProps> = ({ join_us }) => {
             </section>
             <section className="join-us__image">
                 <Image
+                    className='join-us__pic'
                     src={join_us.promo.src}
                     alt={join_us.promo.alt}
                     width={join_us.promo.width}
@@ -52,4 +53,6 @@ export const JoinUsNewMan: React.FC<JoinUsDataProps> = ({ join_us }) => {
         </main>
     );
 };
+
+export default memo(JoinUsNewMan);
 

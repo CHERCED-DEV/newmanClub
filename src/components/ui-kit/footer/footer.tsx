@@ -10,12 +10,12 @@ const CopyRigth = lazy(() => import('./utils/sections/copyrigth/CopyRigth'));
 export const Footer: React.FC<footerDataProps> = ({ footer }) => {
     return (
         <footer className={styles.footer}>
-            <React.Suspense fallback={<div>Loading...</div>}>
+            <div className={styles.footerContainer}>
                 <NewManRemaindMe newmanRM={footer.newmanRm} />
-                <ContactMe contactMe={footer.contactMe} />
                 <NewsLetter newsletter={footer.newsletter} />
-                <CopyRigth copyRight={footer.copyRight} />
-            </React.Suspense>
+                <ContactMe contactMe={footer.contactMe} />
+            </div>
+            <CopyRigth copyRight={footer.copyRight} />
         </footer>
     );
 };

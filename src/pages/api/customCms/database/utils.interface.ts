@@ -1,4 +1,4 @@
-import { JoinUsConfig } from "@/components/mains/JoinUsNewMan/utils/joinus.interface";
+import { JoinUsConfig } from "@/components/mains/join-us-newman/utils/joinus.interface";
 import { GroupOptionsConfig, MemoriesConfig } from "@/components/mains/group-options/utils/groupoptions.interface";
 import { SoundtrackConfig } from "@/components/mains/soundtrack/utils/soundtrack.interface";
 import { TheCrewConfig } from "@/components/mains/the-crew/utils/thecrew.interface";

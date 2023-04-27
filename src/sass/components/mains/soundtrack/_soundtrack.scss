@@ -1,0 +1,65 @@
+.soundtrack {
+    background: $c-soundtrack-bg-b;
+    padding-bottom: calculateRem(229px);
+}
+.soundtrack__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(298deg, #2ac5b6, #000000, #2ac5b6, #000000);
+    background-size: 800% 800%;
+    -webkit-animation: soundtrack-bg 25s ease infinite;
+    -moz-animation: soundtrack-bg 25s ease infinite;
+    animation: soundtrack-bg 25s ease infinite;
+}
+.soundtrack__pl-pic {
+    margin-top: calculateRem(75px);
+    margin-bottom: calculateRem(45px);
+    width: calculateRem(274px);
+    height: calculateRem(353px);
+}
+.soundtrack__banner-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.soundtrack__banner-pic {
+    width: calculateRem(428px);
+    height: calculateRem(455px);
+    object-fit: cover;
+}
+.soundtrack__title-container {
+    @include container-wrap();
+    position: absolute;
+    bottom: calculateRem(-246px);
+    
+}
+.soundtrack__title {
+    @include font-size(56px);
+    font-weight: $f-weight-bold;
+    color: $default-text1;
+    line-height: 1;
+    &:last-child {
+        text-align: right;
+        margin-right: calculateRem(10px);
+    }
+}
+.soundtrack__pl-pic {
+    
+}
+
+@-webkit-keyframes soundtrack-bg {
+    0%{background-position:0% 26%}
+    50%{background-position:100% 75%}
+    100%{background-position:0% 26%}
+}
+@-moz-keyframes soundtrack-bg {
+    0%{background-position:0% 26%}
+    50%{background-position:100% 75%}
+    100%{background-position:0% 26%}
+}
+@keyframes soundtrack-bg {
+    0%{background-position:0% 26%}
+    50%{background-position:100% 75%}
+    100%{background-position:0% 26%}
+}

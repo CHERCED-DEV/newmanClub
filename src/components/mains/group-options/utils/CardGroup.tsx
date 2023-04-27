@@ -34,19 +34,19 @@ export const CardGroup: React.FC<CardDataProps> = ({ card }) => {
                     width={newsCard.background_img.width}
                     height={newsCard.background_img.height}
                 />
-                <div className='card__info-container'>
+                 <div className='card__info-container'>
                     <section className='card__news-date'>
-                        <span className='card__news-day'>{ }</span>
+                        <span className='card__news-day'>{newsCard.date.day}</span>
                         <div className='card__news-gtm'>
-                            <span className='card__news-month'>{ }</span>
-                            <span className='card__news-year'>{ }</span>
+                            <span className='card__news-month'>{newsCard.date.month}</span>
+                            <span className='card__news-year'>{newsCard.date.year}</span>
                         </div>
                     </section>
                     <section className='card__news-blog'>
-                        <p className='card__news-author'>{ }</p>
-                        <span className='card__news-title'>{ }</span>
-                        <p className='card__news-description'>{ }</p>
-                        <button className='card__news-button'>{ }</button>
+                        <p className='card__news-author'>{newsCard.blog.author}</p>
+                        <span className='card__news-title'>{newsCard.blog.title}</span>
+                        <p className='card__news-description'>{newsCard.blog.description}</p>
+                        <button className='card__news-button'>{newsCard.blog.botton}</button>
                     </section>
                 </div>
             </article>

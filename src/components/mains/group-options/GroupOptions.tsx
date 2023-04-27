@@ -3,28 +3,34 @@ import React, { useEffect, useState } from 'react'
 import { GroupOptionsConfig, GroupOptionsDataProps, MemoriesConfig } from './utils/groupoptions.interface'
 import { CardGroup } from './utils/CardGroup';
 
-export const Events: React.FC<GroupOptionsDataProps> = ({ gData }) => {
+export const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
     const [type, setType] = useState<boolean>(false);
     const [isMemories, setIsMemories] = useState<boolean>(true);
     const [groupDataHandler, setGroupDataHandler] = useState<GroupOptionsConfig>()
     const [memoriesData, setMemoriesData] = useState<MemoriesConfig>()
+    console.log(gData)
 
     useEffect(() => {
         const typeValidator = () => {
-            if (!gData.hasOwnProperty('basic_cards')) {
-                setIsMemories(false);
-                const groupData = gData as MemoriesConfig;
-                setMemoriesData(groupData);
-            } else if (!gData.hasOwnProperty('invite')) {
-                setIsMemories(true);
-                setType(true);
-                const groupData = gData as GroupOptionsConfig;
-                setGroupDataHandler(groupData);
-            }
+          if (!gData.hasOwnProperty('basic_cards')) {
+            setIsMemories(false);
+            const groupData = gData as MemoriesConfig;
+            console.log("dentro del efecto" + groupData)
+            setMemoriesData(groupData);
+            console.log("dentro del efecto" + groupData.cards_events)
+          } else if (!gData.hasOwnProperty('invite')) {
+            setIsMemories(true);
+            setType(true);
+            const groupData = gData as GroupOptionsConfig;
+            setGroupDataHandler(groupData);
+          }
         }
-
-        typeValidator();
-    }, [gData])
+      
+        // Validar si la data de cards_events está presente en gData
+        if (gData && gData.hasOwnProperty('cards_events')) {
+          typeValidator();
+        }
+      }, [gData]);
 
     return (
         <>
@@ -48,12 +54,29 @@ export const Events: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                                     </header>
                                     <ul className={type ? ("events__list") : ("whatsNews__list")}>
                                         {
-                                            groupDataHandler?.cards.map((card) => (
-                                                <CardGroup
-                                                    key={card.background_img.src}
-                                                    card={card}
-                                                />
-                                            ))
+                                            type ? (
+                                                <>
+                                                    {
+                                                        groupDataHandler?.cards_events?.map((card) => (
+                                                            <CardGroup
+                                                                key={card.background_img.src}
+                                                                card={card}
+                                                            />
+                                                        ))
+                                                    }
+                                                </>
+                                            ) : (
+                                                <>
+                                                    {
+                                                        groupDataHandler?.cards_news?.map((card) => (
+                                                            <CardGroup
+                                                                key={card.background_img.src}
+                                                                card={card}
+                                                            />
+                                                        ))
+                                                    }
+                                                </>
+                                            )
                                         }
                                     </ul>
                                     <footer className={type ? ("events__footer") : ("whatsNews__footer")}>
@@ -81,7 +104,7 @@ export const Events: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                                     </header>
                                     <ul className='memories__list'>
                                         {
-                                            memoriesData?.basic_cards.map((card) => (
+                                            memoriesData?.basic_cards?.map((card) => (
                                                 <li key={card.src} className="memories__item">
                                                     <Image
                                                         src={card.src}

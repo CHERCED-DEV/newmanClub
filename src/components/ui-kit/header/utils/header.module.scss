@@ -1,29 +1,45 @@
+@import "../../../../sass/imports";
+
 .header {
+    background-color: $main-header;
+    max-height: calculateRem(91px);
+}
+
+.headerContainer {
+    @include container-wrap();
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
   
   .headerLogo {
-    // Estilos para el logo...
+    
   }
   
   .headerLogoImage {
-    // Estilos para la imagen del logo...
+    width: calculateRem(94px);
   }
-  
+
+  .headerButtonMob {
+
+  }
+  .headerLogoImage {
+
+  }
   .headerNav {
     // Estilos para la navegación...
   }
   
   .headerNavList {
-    // Estilos para la lista de navegación...
+    display: none;
   }
   
   .headerNavItem {
     // Estilos para los elementos de la lista de navegación...
   }
   
-  .header__about {
-    // Estilos para la sección "Acerca de"...
+  .headerAbout {
+    display: none;
   }
   
   .headerLabel {
@@ -40,8 +56,11 @@
 
   :export {
     header: header;
+    headerContainer: headerContainer;
     headerLogo: headerLogo;
     headerLogoImage: headerLogoImage;
+    headerMenuIcon: headerMenuIcon;
+    headerButtonMob: headerButtonMob;
     headerNav: headerNav;
     headerNavList: headerNavList;
     headerNavItem: headerNavItem;
@@ -49,4 +68,4 @@
     headerLabel: headerLabel;
     headerImages: headerImages;
     headerImag: headerImag;
-  }
+  } 

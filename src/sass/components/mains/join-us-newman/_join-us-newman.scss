@@ -1,0 +1,59 @@
+.join-us {
+    background: $c-joinus-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.join-us__content {
+    @include container-wrap();
+}
+.join-us__title {
+    @include font-size(57px);
+    color: $t-join-color;
+    font-weight: $f-weight-normal;
+    margin-top: calculateRem(40px);
+    margin-bottom: calculateRem(17px);
+    &::after {
+        content: "us.";
+        color: $c-brand-secundary;
+        font-weight: $f-weight-bold;
+        margin-left: calculateRem(15px);
+    }
+}
+.join-us__description {
+    color: $p-join-color; 
+    line-height: 1.5;
+    padding-right: calculateRem(50px);
+    padding-bottom: calculateRem(30px);
+}
+.join-us__form {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    padding-bottom: calculateRem(70px);
+}
+.join-us__input {
+    @include regularInput($ct: $input-color2);
+    margin-bottom: calculateRem(8px);
+    box-shadow: none;
+}
+.join-us__textarea {
+    @include regularInput($h: 192px, $fs: 16px, $ct: $input-color2);
+    padding-top: calculateRem(20px);
+    margin-bottom: calculateRem(8px);
+    box-shadow: none;
+}
+.join-us__button {
+    @include regularButton($w: 222px);
+}
+.join-us__image {
+    margin-top: -140px;
+    order: -1;
+}
+
+.join-us__pic {
+    width: calculateRem(332px);
+    height: calculateRem(260px);
+}
+

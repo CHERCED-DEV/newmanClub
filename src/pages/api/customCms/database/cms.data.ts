@@ -52,6 +52,12 @@ export const cms: CmsDataConfig = {
                     },
                 ],
             },
+            mobile_icon: {
+                src: "/assets/logos/menu-mob.svg",
+                alt: "church",
+                width: 51,
+                height: 53,
+            },
             menu_mobile: {
                 src: "/assets/logos/church-logo.svg",
                 alt: "church",
@@ -365,38 +371,38 @@ export const cms: CmsDataConfig = {
             {
                 src: "/assets/imgs/memories/teamOne-memories.png",
                 alt: "nice people meet",
-                width: 0,
-                height: 0
+                width: 10,
+                height: 10
             },
             {
                 src: "/assets/imgs/memories/teamTwo-memories.png",
                 alt: "nice people meet",
-                width: 0,
-                height: 0
+                width: 10,
+                height: 10
             },
             {
                 src: "/assets/imgs/memories/teamThree-memories.png",
                 alt: "nice people meet",
-                width: 0,
-                height: 0
+                width: 10,
+                height: 10
             },
             {
                 src: "/assets/imgs/memories/teamFour-memories.png",
                 alt: "nice people meet",
-                width: 0,
-                height: 0
+                width: 10,
+                height: 10
             },
             {
                 src: "/assets/imgs/memories/teamFive-memories.png",
                 alt: "nice people meet",
-                width: 0,
-                height: 0
+                width: 10,
+                height: 10
             },
             {
                 src: "/assets/imgs/memories/teamSix-memories.png",
                 alt: "nice people meet",
-                width: 0,
-                height: 0
+                width: 10,
+                height: 10
             }
         ],
         button: "More memories"
@@ -413,10 +419,10 @@ export const cms: CmsDataConfig = {
             "Soundtrack"
         ],
         music_list: {
-            src: "",
-            alt: "",
-            width: 0,
-            height: 0 
+            src: "/assets/utils/song.png",
+            alt: "song of newman",
+            width: 374,
+            height: 482 
         }
     },
     join_us: {
@@ -442,12 +448,12 @@ export const cms: CmsDataConfig = {
             required: true,
             error: "that field its requiered"
         },
-        button: "Sent",
+        button: "Join us",
         promo: {
-            src: "",
-            alt: "",
-            width: 0,
-            height: 0
+            src: "/assets/imgs/banners/online-communication.png",
+            alt: "chanels",
+            width: 777,
+            height: 680
         }  
     }
 };

@@ -12,6 +12,7 @@ export interface HeaderConfig {
         church_name: string,
         social_Logo: ImgConfig[],
     },
+    mobile_icon: ImgConfig,
     menu_mobile: ImgConfig
 }
 
