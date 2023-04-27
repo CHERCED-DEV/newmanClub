@@ -88,6 +88,8 @@
     border-radius: calculateRem(30px);
     box-shadow: $border-regular;
     object-fit: cover;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card__news-blog {
