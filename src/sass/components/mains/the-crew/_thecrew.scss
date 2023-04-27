@@ -30,7 +30,7 @@
 
 .the-crew__description {
     @include font-size($f-size-sm);
-    margin-right: calculateRem(37px);
+    margin-right: 13%;
     margin-bottom: calculateRem(20px);
     line-height: 1.3;
 }
