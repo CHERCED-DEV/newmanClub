@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 ul,ol {
@@ -35,6 +36,7 @@ p {
     display: flex;
     flex-direction: column;
     width: 100%;
+   
 }
 
 /*!
