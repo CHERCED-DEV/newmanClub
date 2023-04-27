@@ -81,7 +81,9 @@
 }
 
 .card-pic {
-    width: calculateRem(354px);
+    max-width: calculateRem(354px);
+    min-width: calculateRem(200px);
+    width: 100%;
     height: calculateRem(338px);
     border-radius: calculateRem(30px);
     box-shadow: $border-regular;
