@@ -27,7 +27,7 @@
         margin-left: calculateRem(17px);
     }
 }
-
+.the-crew__photo {display: none }
 .the-crew__description {
     @include font-size($f-size-sm);
     margin-right: 13%;
