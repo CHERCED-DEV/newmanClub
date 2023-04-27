@@ -33,7 +33,7 @@ export default function Home({ cmsData }: { cmsData: CmsDataConfig }) {
 
 
 export const getServerSideProps: GetServerSideProps = async () => {
-    const res = await fetch(`${process.env.VERCEL_URL_CORS}/api/customCms`);
+    const res = await fetch(`https://newman-club-seven.vercel.app/api/customCms`);
     const data = await res.json();
     return {
         props: {
