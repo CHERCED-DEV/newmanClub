@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import styles from "./utils/header.module.scss";
-import React from 'react';
+import React, { memo } from 'react';
 import { HeaderDataProps } from './utils/header.interface';
 import { MenuMobile } from './mobile-menu/MenuMobile';
 
-export const Header: React.FC<HeaderDataProps> = ({ header }) => {
+const Header: React.FC<HeaderDataProps> = ({ header }) => {
     return (
         <>
             <MenuMobile header={header} />
@@ -48,16 +48,18 @@ export const Header: React.FC<HeaderDataProps> = ({ header }) => {
                         </section>
                     </div>
                     <div className={styles.headerButtonMob}>
-                            <Image
-                                className={styles.headerMenuIcon}
-                                src={header.mobile_icon.src}
-                                alt={header.mobile_icon.alt}
-                                width={header.mobile_icon.width}
-                                height={header.mobile_icon.height}
-                            />
-                        </div>
+                        <Image
+                            className={styles.headerMenuIcon}
+                            src={header.mobile_icon.src}
+                            alt={header.mobile_icon.alt}
+                            width={header.mobile_icon.width}
+                            height={header.mobile_icon.height}
+                        />
+                    </div>
                 </div>
             </header>
         </>
     )
 }
+
+export default memo(Header);

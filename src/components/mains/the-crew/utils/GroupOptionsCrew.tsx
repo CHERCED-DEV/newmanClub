@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { memo } from 'react';
 import { GroupOptionsCrewDataProps } from './thecrew.interface';
 
-export const GroupOptionsCrew: React.FC<GroupOptionsCrewDataProps> = ({ group_options }) => {
+const GroupOptionsCrew: React.FC<GroupOptionsCrewDataProps> = ({ group_options }) => {
     return (
         <article className="group-options-crew">
             <div className="group-options-crew__image-container">
@@ -19,3 +19,4 @@ export const GroupOptionsCrew: React.FC<GroupOptionsCrewDataProps> = ({ group_op
     );
 };
 
+export default memo(GroupOptionsCrew);

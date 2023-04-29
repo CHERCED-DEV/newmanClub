@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { memo } from 'react';
 import { CardDataProps, CardsEventsConfig, CardsNewsConfig } from './groupoptions.interface';
 
 
-export const CardGroup: React.FC<CardDataProps> = ({ card }) => {
+const CardGroup: React.FC<CardDataProps> = ({ card }) => {
     if ('title' in card) {
         const eventCard = card as CardsEventsConfig;
         return (
@@ -53,3 +53,5 @@ export const CardGroup: React.FC<CardDataProps> = ({ card }) => {
         );
     }
 };
+
+export default memo(CardGroup);

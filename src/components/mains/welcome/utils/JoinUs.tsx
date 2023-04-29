@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { memo } from 'react'
 import { JoinUsDataConfig } from './welcome.interface'
 
-export const JoinUs: React.FC<JoinUsDataConfig> = ({ join_us }) => {
+const JoinUs: React.FC<JoinUsDataConfig> = ({ join_us }) => {
     return (
         <section className="join-us-v">
             <div className="join-us__image-v">
@@ -28,3 +28,4 @@ export const JoinUs: React.FC<JoinUsDataConfig> = ({ join_us }) => {
     )
 }
 
+export default memo(JoinUs);

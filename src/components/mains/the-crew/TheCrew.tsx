@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { lazy, memo } from 'react'
 import Image from 'next/image'
 import { TheCrewDataProps } from './utils/thecrew.interface'
-import { GroupOptionsCrew } from './utils/GroupOptionsCrew'
 
-export const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
+const GroupOptionsCrew = lazy(() => import('./utils/GroupOptionsCrew'))
+
+const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
     return (
         <>
             <main className='the-crew'>
@@ -17,13 +18,13 @@ export const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
                     <button className='the-crew__cta'>{the_crew.button}</button>
                 </section>
                 <section className='the-crew__photo'>
-                        <Image
-                            className='the-crew__photo-pic'
-                            src={the_crew.crew_img.src}
-                            alt={the_crew.crew_img.alt}
-                            width={the_crew.crew_img.width}
-                            height={the_crew.crew_img.height}
-                        />
+                    <Image
+                        className='the-crew__photo-pic'
+                        src={the_crew.crew_img.src}
+                        alt={the_crew.crew_img.alt}
+                        width={the_crew.crew_img.width}
+                        height={the_crew.crew_img.height}
+                    />
                 </section>
             </main>
             <section className='group-options'>
@@ -39,3 +40,4 @@ export const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
     )
 }
 
+export default memo(TheCrew)

@@ -15,46 +15,7 @@ export default function Document() {
                     href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
                     rel="stylesheet"
                 />
-                <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;700&family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet"/>
-                <link
-                    rel="preload"
-                    href="/fonts/Lato/Lato-Regular.ttf"
-                    as="font"
-                    type="font/ttf"
-                    crossOrigin="anonymous"
-                />
-                <link
-                    rel="preload"
-                    href="/fonts/Lato/Lato-Bold.ttf"
-                    as="font"
-                    type="font/ttf"
-                    crossOrigin="anonymous"
-                />
-                <link
-                    rel="preload"
-                    href="/fonts/Lato/Lato-Black.ttf"
-                    as="font"
-                    type="font/ttf"
-                    crossOrigin="anonymous"
-                />
-                <link
-                    rel="preload"
-                    href="/fonts/Lato/Lato-Regular.ttf"
-                    as="font"
-                    type="font/ttf"
-                    crossOrigin="anonymous"
-                    media="print"
-                />
-                <link
-                    rel="preload"
-                    href="/fonts/Lato/Lato-Bold.ttf"
-                    as="font"
-                    type="font/ttf"
-                    crossOrigin="anonymous"
-                    media="print"
-                />
-
-                <link rel="icon" href="/assets/icons/church-logo.svg" />
+                <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;700&family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet" />
                 <link rel="mask-icon" href="@Model.MaskIcon" color="#245086" />
                 <meta name="msapplication-TileColor" content="#245086" />
                 <meta name="theme-color" content="#245086" />

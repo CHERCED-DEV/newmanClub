@@ -1,9 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { WelcomeDataProps } from './utils/welcome.interface';
-import { JoinUs } from './utils/JoinUs';
+import React, { useState, useRef, useEffect, memo, lazy } from 'react';
 import Image from 'next/image';
+import { WelcomeDataProps } from './utils/welcome.interface';
 
-export const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
+const JoinUs = lazy(()=>import("./utils/JoinUs"));
+
+const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
     const [playing, setPlaying] = useState(true);
     const [wideScreen, setWideScreen] = useState(window.innerWidth >= 640);
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -67,4 +68,6 @@ export const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
         </>
     );
 };
+
+export default memo(Welcome)
 

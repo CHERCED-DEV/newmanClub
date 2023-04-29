@@ -1,9 +1,10 @@
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import { GroupOptionsConfig, GroupOptionsDataProps } from './utils/groupoptions.interface'
-import { CardGroup } from './utils/CardGroup';
+import Image from 'next/image';
+import React, { lazy, memo, useEffect, useState } from 'react';
+import { GroupOptionsConfig, GroupOptionsDataProps } from './utils/groupoptions.interface';
 
-export const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
+const CardGroup = lazy(() => import('./utils/CardGroup'));
+
+const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
     const [type, setType] = useState<boolean>();
     const [groupDataHandler, setGroupDataHandler] = useState<GroupOptionsConfig>()
     console.log(gData)
@@ -88,3 +89,5 @@ export const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
         </>
     )
 }
+
+export default memo(GroupOptions);

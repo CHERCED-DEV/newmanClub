@@ -1,8 +1,9 @@
 import type { AppProps } from 'next/app'
 import "../sass/styles.scss"
-import { Layout } from '@/components/ui-kit/Layout'
-import { useCallback, useEffect } from 'react';
+import { lazy, useCallback, useEffect } from 'react';
 import { getCMSData } from '../../utils/handlers/requests';
+
+const Layout = lazy(() => import("../components/ui-kit/Layout"));
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -13,8 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     useEffect(() => {
         storageConstructor()
-
-    }, [])
+    }, [storageConstructor])
 
     return (
         <Layout>

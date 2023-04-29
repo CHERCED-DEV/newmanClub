@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Image from 'next/image';
 import { SoundtrackDataProps } from './utils/soundtrack.interface';
 
@@ -23,16 +23,16 @@ const Soundtrack: React.FC<SoundtrackDataProps> = ({ soundtrack }) => {
                     />
                 </div>
                 <div className='soundtrack__title-container'>
-                {
-                    soundtrack.title.map((title) => (
-                        <h3 key={title} className='soundtrack__title'>{title}</h3>
-                    ))
-                }
+                    {
+                        soundtrack.title.map((title) => (
+                            <p key={title} className='soundtrack__title'>{title}</p>
+                        ))
+                    }
                 </div>
             </section>
         </article>
     );
 }
 
-export default React.memo(Soundtrack);
+export default memo(Soundtrack);
 
