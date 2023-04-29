@@ -40,6 +40,13 @@
     flex-direction: column;
     width: 100%;
 }
+.whatsNews__item {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .card {
     display: flex;
@@ -47,7 +54,8 @@
     margin-bottom: calculateRem(20px);
     position: relative;
     align-items: center;
-
+    max-width: calculateRem(354px);
+    width: 100%;
     &::after {
         content: "";
         background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%);
