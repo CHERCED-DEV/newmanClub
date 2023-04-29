@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
 }
+.welcome__play {
+    display: none;
+}
+.join-us__image-v {
+    display: none;
+}
 .join-us__content-v {
     background-color: red;
 }
