@@ -16,7 +16,7 @@ const Layout: React.FC<LayOutDataProps> = ({ children }) => {
     const [layoutData] = useLocalStorageData<LayoutCmsConfig>("cmsData", "layout");
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [initialStorageValue, setInitialStorageValue] = useState<boolean>(false);
-
+    console.log(Layout)
     useEffect(() => {
         const storedValue = window.sessionStorage.getItem('isLoading');
         if (storedValue !== null) {
