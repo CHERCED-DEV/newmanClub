@@ -58,7 +58,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: calculateRem(315px);
+    min-width: calculateRem(260px);
+    width: 100%;
+    max-width: calculateRem(315px);
     margin: calculateRem(18px) 0;
     order: 2;
 }
