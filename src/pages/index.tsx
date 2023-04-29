@@ -24,7 +24,7 @@ export default function Home({ cmsData }: { cmsData: CmsDataConfig }) {
                 cmsData && (
                     <>
                         <Welcome welcome={cmsData.welcome} />
-                        {/* <GroupOptions key={cmsData.events.invite} gData={cmsData.events} /> */}
+                        <GroupOptions key={cmsData.events.invite} gData={cmsData.events} />
                         <TheCrew the_crew={cmsData.the_crew} />
                         <GroupOptions key={cmsData.whats_news.description} gData={cmsData.whats_news} />
                         <Memories memories={cmsData.memories} />

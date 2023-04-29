@@ -76,10 +76,10 @@ const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                                 }
                             </>
                             <footer className={type ? ("events__footer") : ("whatsNews__footer")}>
-                                <button className={type ? ("events__footer-button") : ("whatsNews__footer-button")}>{groupDataHandler?.button}</button>
                                 {
                                     type ? (<p className='events__footer-description'>{groupDataHandler?.description}</p>) : (null)
                                 }
+                                <button className={type ? ("events__footer-button") : ("whatsNews__footer-button")}>{groupDataHandler?.button}</button>
                             </footer>
                         </section>
                     </>

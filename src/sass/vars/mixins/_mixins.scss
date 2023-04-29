@@ -53,7 +53,7 @@ $parentSize: 16px;
     padding: 0 calculateRem(20px);
     width: calculateRem($w);
     height: calculateRem($h);
-    border-radius: $br;
+    border-radius: calculateRem($br);
     text-align: center;
     text-transform: uppercase;
     color: $ct;

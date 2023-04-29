@@ -4,11 +4,23 @@
 @import "./vars/vars-typography";
 @import "./vars/mixins/mixins";
 
-// components: 
+//utils:
 @import "./components/utils/loaders/starterApp";
-@import "./components/mains/join-us-newman/join-us-newman";
-@import "./components/mains/soundtrack/soundtrack";
-@import "./components/mains/memories/memories";
-@import "./components/mains/whats-news/whats-news";
-@import "./components/mains/the-crew/thecrew";
+
+// components: 
 @import "./components/mains/welcome/welcome";
+@import "./components/mains/events/events";
+@import "./components/mains/the-crew/thecrew";
+@import "./components/mains/whats-news/whats-news";
+@import "./components/mains/memories/memories";
+@import "./components/mains/soundtrack/soundtrack";
+@import "./components/mains/join-us-newman/join-us-newman";
+
+
+
+
+
+
+
+
+

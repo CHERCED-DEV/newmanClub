@@ -1,0 +1,114 @@
+.events {
+    @include container-wrap();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: calculateRem(53px);
+    padding-bottom: calculateRem(133px);
+    background: $c-events-bg;
+    font-family: $f-subtitle;
+    text-transform: uppercase;
+    font-weight: $f-weight-bold;
+}
+
+.events__header {
+    text-align: center;
+    color: $c-brand-primary;
+    margin-bottom: calculateRem(25px);
+}
+
+.events__header-title {
+    @include font-size(30px);
+    line-height: 1;
+}
+
+.events__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.events__item {
+    margin-bottom: calculateRem(10px);
+}
+
+.card-event {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        content: "";
+        background: rgba(0, 0, 0, 0.5);
+        background-size: cover;
+        border-radius: calculateRem(20px);
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-width: calculateRem(354px);
+        top: 0;
+    }
+}
+
+.card-pic-event {
+    width: calculateRem(354px);
+    height: calculateRem(183px);
+    object-fit: cover;
+    border-radius: calculateRem(20px);
+}
+
+.card__info-container-event {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: $f-weight-bold;
+    text-transform: uppercase;
+    z-index: 3;
+    height: 100%;
+    justify-content: center;
+}
+
+.card__info-title-event {
+    @include font-size($f-size-md-xxl);
+    color: $default-text1;
+}
+
+.card__info-date-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $c-brand-secundary;
+    line-height: 1;
+}
+
+.card__info-day-event {
+    @include font-size(80px);
+    line-height: 0.9;
+}
+
+.card__info-month-event {
+    @include font-size(32px);
+    line-height: inherit;
+}
+
+.events__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.events__footer-description {
+    text-transform: none;
+    font-weight: $f-weight-light;
+    text-align: center;
+    margin: calculateRem(18px) 4% calculateRem(20px);
+}
+
+.events__footer-button {
+    @include regularButton($w: 241px, $h: 55px, $br: 28px);
+}
