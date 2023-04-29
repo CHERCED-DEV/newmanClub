@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100vh;
 }
 
 .welcome__play {
@@ -50,4 +51,22 @@
     color: $forms-color;
     text-transform: uppercase;
     width: 59%;
+}
+
+.welcome__bg-mb {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../../public/assets/utils/videoLoaderMob.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.welcome__bg-sk {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../../public/assets/utils/videoLoaderDsk.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
