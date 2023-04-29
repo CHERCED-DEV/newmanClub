@@ -180,8 +180,8 @@ export const cms: CmsDataConfig = {
         cards: [
             {
                 background_img: {
-                    src: "/assets/logos/church-logo.svg",
-                    alt: "church logo",
+                    src: "/assets/events/crewOne-events.jpg",
+                    alt: "events",
                     width: 55.27,
                     height: 30.22,
                 },
@@ -191,8 +191,8 @@ export const cms: CmsDataConfig = {
             },
             {
                 background_img: {
-                    src: "/assets/logos/church-logo.svg",
-                    alt: "church logo",
+                    src: "/assets/events/crewTwo-events.jpg",
+                    alt: "events",
                     width: 55.27,
                     height: 30.22,
                 },
@@ -202,8 +202,8 @@ export const cms: CmsDataConfig = {
             },
             {
                 background_img: {
-                    src: "/assets/logos/church-logo.svg",
-                    alt: "church logo",
+                    src: "/assets/events/crewThree-events.jpg",
+                    alt: "events",
                     width: 55.27,
                     height: 30.22,
                 },
@@ -213,8 +213,8 @@ export const cms: CmsDataConfig = {
             },
             {
                 background_img: {
-                    src: "/assets/logos/church-logo.svg",
-                    alt: "church logo",
+                    src: "/assets/events/crewFour-events.jpg",
+                    alt: "events",
                     width: 55.27,
                     height: 30.22,
                 },

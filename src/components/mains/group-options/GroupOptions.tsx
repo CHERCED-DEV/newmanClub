@@ -65,7 +65,7 @@ const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                                         <ul className="whatsNews__list">
                                             {
                                                 groupDataHandler?.cards?.map((card) => (
-                                                    <li key={card.background_img.alt} className='whatsNews__item'>
+                                                    <li key={card.background_img.src} className='whatsNews__item'>
                                                         <CardGroup
                                                             card={card}
                                                         />
