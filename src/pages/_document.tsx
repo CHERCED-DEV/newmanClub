@@ -16,8 +16,8 @@ export default function Document() {
                     rel="stylesheet"
                 />
                 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;700&family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet" />
-                <link rel="preload" href="/assets/videos/welcomeDesktop.mp4" as="video/mp4" />
-                <link rel="preload" href="/assets/videos/welcomeMobile.mp4" as="video/mp4" />
+                <link rel="preload" href="/assets/videos/welcomeDesktop.mp4" as="video" type="video/mp4" media="(min-width: 769px)" />
+                <link rel="preload" href="/assets/videos/welcomeMobile.mp4" as="video" type="video/mp4" media="(max-width: 768px)" />
                 <link rel="mask-icon" href="@Model.MaskIcon" color="#245086" />
                 <meta name="msapplication-TileColor" content="#245086" />
                 <meta name="theme-color" content="#245086" />

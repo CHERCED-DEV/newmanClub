@@ -7,7 +7,6 @@ const CardGroup = lazy(() => import('./utils/CardGroup'));
 const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
     const [type, setType] = useState<boolean>();
     const [groupDataHandler, setGroupDataHandler] = useState<GroupOptionsConfig>()
-    console.log(gData)
 
     useEffect(() => {
         const typeValidator = () => {
