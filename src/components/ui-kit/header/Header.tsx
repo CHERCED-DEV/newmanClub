@@ -1,13 +1,20 @@
 import Image from 'next/image';
 import styles from "./utils/header.module.scss";
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import { HeaderDataProps } from './utils/header.interface';
 import { MenuMobile } from './mobile-menu/MenuMobile';
 
 const Header: React.FC<HeaderDataProps> = ({ header }) => {
+
+    const [handleSubMenu, sethandleSubMenu] = useState<boolean>(false);
+
+    const handleEvent = () => {
+        sethandleSubMenu(!handleSubMenu);
+    }
+    
     return (
         <>
-            <MenuMobile header={header} />
+            <MenuMobile header={header} handleSubMenu={handleSubMenu} handleEvent={handleEvent} />
             <header className={styles.header}>
                 <div className={styles.headerContainer}>
                     <div className={styles.headerLogo}>
@@ -47,7 +54,7 @@ const Header: React.FC<HeaderDataProps> = ({ header }) => {
                             }
                         </section>
                     </div>
-                    <div className={styles.headerButtonMob}>
+                    <button onClick={handleEvent} className={styles.headerButtonMob}>
                         <Image
                             className={styles.headerMenuIcon}
                             src={header.mobile_icon.src}
@@ -55,7 +62,7 @@ const Header: React.FC<HeaderDataProps> = ({ header }) => {
                             width={header.mobile_icon.width}
                             height={header.mobile_icon.height}
                         />
-                    </div>
+                    </button>
                 </div>
             </header>
         </>

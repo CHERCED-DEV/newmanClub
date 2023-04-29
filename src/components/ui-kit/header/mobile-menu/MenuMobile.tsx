@@ -1,18 +1,26 @@
-import React from 'react'
-import { HeaderDataProps } from '../utils/header.interface'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
+import { HeaderDataProps } from '../utils/header.interface';
+import styles from '../utils/header.module.scss';
 
-export const MenuMobile: React.FC<HeaderDataProps> = ({header}) => {
+interface MenuMobileDataProps extends HeaderDataProps {
+    handleEvent: () => void
+    handleSubMenu: boolean;
+}
+
+export const MenuMobile: React.FC<MenuMobileDataProps> = ({header,handleEvent,handleSubMenu}) => {
   return (
-    <nav className='menu-mobile'>
-        <ul className='menu-mobile_list'>
+    <nav className={`${styles.menuMobile} ${handleSubMenu ? styles.on : styles.off}`}>
+        <button onClick={handleEvent} className=''>X</button>
+        <ul className={styles.menuMobileList}>
             {
                 header.options.map((option)=>(
-                    <li key={option.label} className=""><a href={option.link}>{option.label}</a></li>
+                    <li key={option.label} className={styles.menuMobileItem}><a href={option.link}>{option.label}</a></li>
                 ))
             }
         </ul>
         <Image
+            className={styles.menuMobileLogo}
             src={header.menu_mobile.src}
             alt={header.menu_mobile.alt}
             width={header.menu_mobile.width}
