@@ -20,20 +20,26 @@ export default function Home({ cmsData }: { cmsData: CmsDataConfig }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/assets/logos/church-logo.svg" />
             </Head>
-            <Welcome welcome={cmsData.welcome} />
-            <GroupOptions key={cmsData.events.invite} gData={cmsData.events} />
-            <TheCrew the_crew={cmsData.the_crew} />
-            <GroupOptions key={cmsData.whats_news.description} gData={cmsData.whats_news} />
-            <Memories memories={cmsData.memories} />
-            <Soundtrack soundtrack={cmsData.soundtrack} />
-            <JoinUsNewMan join_us={cmsData?.join_us} />
+            {
+                cmsData && (
+                    <>
+                        <Welcome welcome={cmsData.welcome} />
+                        <GroupOptions key={cmsData.events.invite} gData={cmsData.events} />
+                        <TheCrew the_crew={cmsData.the_crew} />
+                        <GroupOptions key={cmsData.whats_news.description} gData={cmsData.whats_news} />
+                        <Memories memories={cmsData.memories} />
+                        <Soundtrack soundtrack={cmsData.soundtrack} />
+                        <JoinUsNewMan join_us={cmsData?.join_us} />
+                    </>
+                )
+            }
         </>
     )
 }
 
 
 export const getServerSideProps: GetServerSideProps = async () => {
-    const res = await fetch(`https://newman-club-seven.vercel.app/api/customCms`);
+    const res = await fetch(`${process.env.VERCEL_URL_CORS}/api/customCms`);
     const data = await res.json();
     return {
         props: {
