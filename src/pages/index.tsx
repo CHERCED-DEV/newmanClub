@@ -18,12 +18,12 @@ export default function Home({ cmsData }: { cmsData: CmsDataConfig }) {
                 <meta name="description" content=
                     "Catholic organization Newman fosters faith and knowledge among students and professionals through cultural, social, and spiritual activities." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/assets/icons/church-logo.svg" />
+                <link rel="icon" href="/assets/logos/church-logo.svg" />
             </Head>
             <Welcome welcome={cmsData.welcome} />
-            <GroupOptions gData={cmsData.events} />
+            <GroupOptions key={cmsData.events.invite} gData={cmsData.events} />
             <TheCrew the_crew={cmsData.the_crew} />
-            <GroupOptions gData={cmsData.whats_news} />
+            <GroupOptions key={cmsData.whats_news.description} gData={cmsData.whats_news} />
             <Memories memories={cmsData.memories} />
             <Soundtrack soundtrack={cmsData.soundtrack} />
             <JoinUsNewMan join_us={cmsData?.join_us} />

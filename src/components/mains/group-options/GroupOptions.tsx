@@ -46,13 +46,13 @@ const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                                     type ? (null) : (<p className='whatsNews__header-description'>{groupDataHandler?.description}</p>)
                                 }
                             </header>
-                            <ul className={type ? ("events__list") : ("whatsNews__list")}>
+                            <>
                                 {
                                     type ? (
-                                        <>
+                                        <ul className="events__list">
                                             {
-                                                groupDataHandler?.cards?.map((card) => (
-                                                    <li key={card.background_img.src} className='events__item'>
+                                                groupDataHandler?.cards?.map((card, index: number) => (
+                                                    <li key={index.toString() + "jkl"} className='events__item'>
                                                         <CardGroup
                                                             card={card}
                                                         />
@@ -60,22 +60,22 @@ const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                                                 ))
 
                                             }
-                                        </>
+                                        </ul>
                                     ) : (
-                                        <>
+                                        <ul className="whatsNews__list">
                                             {
                                                 groupDataHandler?.cards?.map((card) => (
-                                                    <li key={card.background_img.src} className='whatsNews__item'>
+                                                    <li key={card.background_img.alt} className='whatsNews__item'>
                                                         <CardGroup
                                                             card={card}
                                                         />
                                                     </li>
                                                 ))
                                             }
-                                        </>
+                                        </ul>
                                     )
                                 }
-                            </ul>
+                            </>
                             <footer className={type ? ("events__footer") : ("whatsNews__footer")}>
                                 <button className={type ? ("events__footer-button") : ("whatsNews__footer-button")}>{groupDataHandler?.button}</button>
                                 {

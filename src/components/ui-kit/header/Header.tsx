@@ -42,7 +42,7 @@ const Header: React.FC<HeaderDataProps> = ({ header }) => {
                             {
                                 header.about.social_Logo.map((media) => (
                                     <Image
-                                        key={media.src}
+                                        key={media.src+"jol"}
                                         className={styles.headerImag}
                                         src={media.src}
                                         alt={media.alt}

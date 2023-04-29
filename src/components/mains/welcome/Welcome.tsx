@@ -35,12 +35,12 @@ const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
             <main>
                 <section className="welcome">
                     {wideScreen ? (
-                        <video ref={videoRef} autoPlay className="welcome__video">
+                        <video ref={videoRef} autoPlay={true} muted={true} playsInline={true} className="welcome__video">
                             <source src={welcome.video.dsk.src} type="video/mp4" />
                             {welcome.video.dsk.alert}<code>video</code>.
                         </video>
                     ) : (
-                        <video ref={videoRef} autoPlay className="welcome__video">
+                        <video ref={videoRef} autoPlay={true} muted={true} playsInline={true} className="welcome__video">
                             <source src={welcome.video.mob.src} type="video/mp4" />
                             {welcome.video.mob.alert}<code>video</code>.
                         </video>
@@ -69,5 +69,5 @@ const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
     );
 };
 
-export default memo(Welcome)
+export default memo(Welcome);
 

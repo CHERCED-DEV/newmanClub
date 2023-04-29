@@ -26,7 +26,7 @@ const ContactMe: React.FC<ContactMeDataProps> = ({ contactMe }) => {
             <ul className={styles.footerContactMeSocialMedia}>
                 {
                     contactMe.social_media.map((media) => (
-                        <li key={media.src} className={styles.footerContactMeSocialMediaItem}>
+                        <li key={media.alt} className={styles.footerContactMeSocialMediaItem}>
                             <Image
                                 className={styles.footerContactMeSocialMediaImg}
                                 src={media.src}
