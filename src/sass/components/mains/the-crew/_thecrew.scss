@@ -1,7 +1,10 @@
 .the-crew {
     @include container-wrap();
-    padding-top: calculateRem(168px);
-    padding-bottom: calculateRem(78px);
+    padding-top: calculateRem(75px);
+    padding-bottom: calculateRem(97px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .the-crew__intro {
@@ -11,6 +14,8 @@
     align-items: center;
     padding-left: calculateRem(20px);
     color: $input-color2;
+    order: 1;
+    margin-bottom: calculateRem(12px);
 }
 
 .the-crew__title {
@@ -27,7 +32,14 @@
         margin-left: calculateRem(17px);
     }
 }
-.the-crew__photo {display: none }
+.the-crew__photo {order: 3}
+.the-crew__photo-pic {
+    width: calculateRem(351px);
+    height: calculateRem(328px);
+    border-radius: calculateRem(25px);
+    object-fit: cover;
+}
+
 .the-crew__description {
     @include font-size($f-size-sm);
     margin-right: 13%;
@@ -43,11 +55,12 @@
 }
 
 .group-options {
-    @include container-wrap();
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: calculateRem(90px);
+    min-width: calculateRem(315px);
+    margin: calculateRem(18px) 0;
+    order: 2;
 }
 
 .group-options-container {
@@ -66,19 +79,22 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    border-bottom: 1px solid $c-brand-primary;
+    border-bottom: 1.5px solid $c-brand-primary;
     width: 100%;
     max-width: calculateRem(180px);
+
     &:last-child {
         border: none;
     }
 }
+
 .group-options-crew__title {
     @include font-size(63px);
     font-family: $f-body;
     font-weight: $f-weight-bold;
     color: $c-brand-secundary;
 }
+
 .group-options-crew__description {
     text-align: center;
     color: $c-brand-primary;

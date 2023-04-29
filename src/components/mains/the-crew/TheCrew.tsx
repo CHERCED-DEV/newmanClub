@@ -26,8 +26,7 @@ const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
                         height={the_crew.crew_img.height}
                     />
                 </section>
-            </main>
-            <section className='group-options'>
+                <section className='group-options'>
                 <div className='group-options-container'>
                     {
                         the_crew.group_options.map((group) => (
@@ -36,6 +35,8 @@ const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
                     }
                 </div>
             </section>
+            </main>
+            
         </>
     )
 }
