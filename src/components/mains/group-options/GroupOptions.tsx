@@ -23,10 +23,6 @@ const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
         typeValidator();
     }, [gData]);
 
-    if (type !== null) {
-
-    }
-
     return (
         <>
             {

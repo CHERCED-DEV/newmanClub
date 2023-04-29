@@ -22,7 +22,10 @@
     width: calculateRem(94px);
 }
 
-.headerButtonMob {}
+.headerButtonMob {
+    background-color: transparent;
+    border: none;
+}
 
 .headerLogoImage {}
 
