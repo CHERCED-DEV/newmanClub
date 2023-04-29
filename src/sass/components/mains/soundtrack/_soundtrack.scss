@@ -28,6 +28,7 @@
     width: calculateRem(428px);
     height: calculateRem(455px);
     object-fit: cover;
+    max-width: 100%;
 }
 .soundtrack__title-container {
     @include container-wrap();
