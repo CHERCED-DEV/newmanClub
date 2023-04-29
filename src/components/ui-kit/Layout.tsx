@@ -13,7 +13,7 @@ const Footer = lazy(() => import("./footer/footer"));
 
 const Layout: React.FC<LayOutDataProps> = ({ children }) => {
 
-    const [layout] = useLocalStorageData<LayoutCmsConfig>("cmsData", "layout");
+    const [layoutData] = useLocalStorageData<LayoutCmsConfig>("cmsData", "layout");
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [initialStorageValue, setInitialStorageValue] = useState<boolean>(false);
 
@@ -49,14 +49,18 @@ const Layout: React.FC<LayOutDataProps> = ({ children }) => {
     return (
         <>
             {initialStorageValue && isLoading && <StarterApp />}
-            {!isLoading && layout && (
+            {!isLoading && (
                 <>
                     <Suspense fallback={<NewmanLoader />}>
-                        <Header header={layout.header} />
+                        {
+                            layoutData ? <Header header={layoutData.header} /> : null
+                        }
                         <main className="PAGE-WRAPER">
                             {children}
                         </main>
-                        <Footer footer={layout.footer} />
+                        {
+                            layoutData ? <Footer footer={layoutData?.footer} /> : null
+                        }
                     </Suspense>
                 </>
             )
