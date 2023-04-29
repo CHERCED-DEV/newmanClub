@@ -1,9 +1,13 @@
 @import "../../../../sass/imports";
 
+header {
+    position: fixed;
+    top: 0;
+}
+
 .header {
     background-color: $main-header;
     max-height: calculateRem(91px);
-    position: fixed;
     z-index: $button-scrolltop-zindex;
 }
 
@@ -13,50 +17,46 @@
     justify-content: space-between;
     align-items: center;
 }
-  
-  .headerLogo {
-    
-  }
-  
-  .headerLogoImage {
+
+.headerLogo {}
+
+.headerLogoImage {
     width: calculateRem(94px);
-  }
+}
 
-  .headerButtonMob {
+.headerButtonMob {}
 
-  }
-  .headerLogoImage {
+.headerLogoImage {}
 
-  }
-  .headerNav {
+.headerNav {
     // Estilos para la navegación...
-  }
-  
-  .headerNavList {
-    display: none;
-  }
-  
-  .headerNavItem {
-    // Estilos para los elementos de la lista de navegación...
-  }
-  
-  .headerAbout {
-    display: none;
-  }
-  
-  .headerLabel {
-    // Estilos para la etiqueta...
-  }
-  
-  .headerImages {
-    // Estilos para las imágenes...
-  }
-  
-  .headerImag {
-    // Estilos para cada imagen...
-  }
+}
 
-  :export {
+.headerNavList {
+    display: none;
+}
+
+.headerNavItem {
+    // Estilos para los elementos de la lista de navegación...
+}
+
+.headerAbout {
+    display: none;
+}
+
+.headerLabel {
+    // Estilos para la etiqueta...
+}
+
+.headerImages {
+    // Estilos para las imágenes...
+}
+
+.headerImag {
+    // Estilos para cada imagen...
+}
+
+:export {
     header: header;
     headerContainer: headerContainer;
     headerLogo: headerLogo;
@@ -70,4 +70,4 @@
     headerLabel: headerLabel;
     headerImages: headerImages;
     headerImag: headerImag;
-  } 
+}
