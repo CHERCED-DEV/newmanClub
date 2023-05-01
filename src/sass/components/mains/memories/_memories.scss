@@ -1,4 +1,3 @@
-
 .memories {
     @include container-wrap();
     display: flex;
@@ -27,42 +26,81 @@
 }
 
 .memories__list {
-    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "m1 m3"
+        "m2 m3"
+        "m4 m4"
+        "m5 m6";
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    grid-gap: calculateRem(7px);
+    max-width: 100%;
+    height: 100%;
+
+    .memories__item:nth-child(1) {
+        grid-area: m1;
+    }
+
+    .memories__item:nth-child(2) {
+        grid-area: m2;
+    }
+
+    .memories__item:nth-child(3) {
+        grid-area: m3;
+    }
+
+    .memories__item:nth-child(4) {
+        grid-area: m4;
+    }
+
+    .memories__item:nth-child(5) {
+        grid-area: m5;
+    }
+
+    .memories__item:nth-child(6) {
+        grid-area: m6;
+    }
 }
 
 .memories__item {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 200px;
-    max-width: 398px;
-
     img {
-        object-fit: cover;
-        margin: 2%;
-        height: auto;
-        border-radius: calculateRem(24px);
-        box-shadow: $border-regular;
         width: 100%;
-        height: 180px;
-    }
-
-    img:nth-child(1),
-    img:nth-child(2) {
-        flex-grow: 1;
-        max-width: 46%;
-    }
-    img:nth-child(3) {
-        flex-grow: 1;
-        max-width: 100%;
-    }
-    img:nth-child(4),
-    img:nth-child(5) {
-        flex-grow: 1;
-        max-width: 46%;
+        height: 100%;
+        border-radius: calculateRem(12px);
+        object-fit: cover;
     }
 }
 
+.memories__item:nth-child(1),
+.memories__item:nth-child(2) {
+    img {
+        max-width: calculateRem(172px);
+        min-height: calculateRem(135px);
+    }
+}
+.memories__item:nth-child(3) {
+    img {
+        max-width: calculateRem(172px);
+        min-height: calculateRem(284px);
+    }
+}
+.memories__item:nth-child(4) {
+    img {
+        max-width: calculateRem(357px);
+        min-height: calculateRem(193px);
+    }
+}
+.memories__item:nth-child(5),
+.memories__item:nth-child(6) {
+    img {
+        max-width: calculateRem(172px);
+        min-height: calculateRem(160px);
+    }
+}
+
+
+
 .memories__button {
     @include regularButton($w: 210px, $h: 41px, $bg: $secundary-button);
-    margin: calculateRem(25px) 0 calculateRem(76px);
+    margin: calculateRem(32px) 0 calculateRem(76px);
 }
