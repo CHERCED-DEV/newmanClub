@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: $default-text1;
+    border: none;
     border-radius: calculateRem(41px);
     width: calculateRem(222px);
     height: calculateRem(62px);
@@ -38,9 +39,51 @@
     height: calculateRem(62px);
     background-color: $secundary-button;
     border-radius: 100vh;
+    background-image: url("../../../../../public/assets/utils/join-button.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -2px;
 
-    img {
-        width: calculateRem(40px);
+    &.on {
+        background-color: $c-brand-secundary;
+        background-image: none;
+    }
+
+    .join-us__img-v {
+        background-color: $secundary-button;
+        border-radius: calculateRem(15px);
+        &.on {
+            background: transparent;
+            &:hover {
+                transform: none;
+                animation: none;
+                opacity: 1;
+            }
+        }
+    }
+
+    &:hover .join-us__img-v {
+        transform: scale(2);
+        opacity: 0;
+        animation: zoomOut 1s forwards;
+    }
+
+    &:not(:hover) .join-us__img-v {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    @keyframes zoomOut {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        to {
+            background-color: transparent;
+            transform: scale(2);
+            opacity: 0;
+        }
     }
 }
 
@@ -50,7 +93,9 @@
     font-weight: $f-weight-bold;
     color: $forms-color;
     text-transform: uppercase;
-    width: 59%;
+    width: 72%;
+    padding-left: calculateRem(15px);
+    text-align: left;
 }
 
 .welcome__bg-mb {
