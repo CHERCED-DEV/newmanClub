@@ -3,6 +3,7 @@
     flex-direction: column;
     position: relative;
     height: 100%;
+    max-height: calculateRem(761px);
 }
 
 .welcome__play {

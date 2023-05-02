@@ -38,7 +38,7 @@ const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
     return (
         <>
             {
-                welcome ? (
+                welcome && (
                     <section className="welcome">
                         {wideScreen ? (
                             <video
@@ -93,14 +93,10 @@ const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
                                 />
                             )}
                         </button>
-                    </section>
-                ) : (
-                    <section className="welcome">
-
+                        <JoinUs join_us={welcome.join_us} />
                     </section>
                 )
             }
-            <JoinUs join_us={welcome.join_us} />
         </>
     );
 };
