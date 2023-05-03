@@ -6,21 +6,29 @@ const Soundtrack: React.FC<SoundtrackDataProps> = ({ soundtrack }) => {
     return (
         <article className='soundtrack'>
             <section className='soundtrack__banner'>
-                <Image
-                    className='soundtrack__pl-pic'
-                    src={soundtrack.music_list.src}
-                    alt={soundtrack.music_list.alt}
-                    width={soundtrack.music_list.width}
-                    height={soundtrack.music_list.height}
-                />
+                {
+                    soundtrack.music_list.src && (
+                        <Image
+                            className='soundtrack__pl-pic'
+                            src={soundtrack.music_list.src}
+                            alt={soundtrack.music_list.alt}
+                            width={soundtrack.music_list.width}
+                            height={soundtrack.music_list.height}
+                        />
+                    )
+                }
                 <div className='soundtrack__banner-img'>
-                    <Image
-                        className='soundtrack__banner-pic'
-                        src={soundtrack.man.src}
-                        alt={soundtrack.man.alt}
-                        width={soundtrack.man.width}
-                        height={soundtrack.man.height}
-                    />
+                    {
+                        soundtrack.man.src && (
+                            <Image
+                                className='soundtrack__banner-pic'
+                                src={soundtrack.man.src}
+                                alt={soundtrack.man.alt}
+                                width={soundtrack.man.width}
+                                height={soundtrack.man.height}
+                            />
+                        )
+                    }
                 </div>
                 <div className='soundtrack__title-container'>
                     {

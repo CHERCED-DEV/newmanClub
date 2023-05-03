@@ -30,12 +30,15 @@ const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                     <>
                         <section className={type ? ("events") : ("whatsNews")}>
                             <header className={type ? ("events__header") : ("whatsNews__header")}>
-                                <Image
-                                    src={groupDataHandler.main_logo.src}
-                                    alt={groupDataHandler.main_logo.alt}
-                                    width={groupDataHandler.main_logo.width}
-                                    height={groupDataHandler.main_logo.height}
-                                />
+                                {
+                                    groupDataHandler.main_logo.src && (
+                                        <Image
+                                            src={groupDataHandler.main_logo.src}
+                                            alt={groupDataHandler.main_logo.alt}
+                                            width={groupDataHandler.main_logo.width}
+                                            height={groupDataHandler.main_logo.height}
+                                        />)
+                                }
                                 <h1 className={type ? ("events__header-title") : ("whatsNews__header-title")}>{groupDataHandler?.title}</h1>
                                 {
                                     type ? (null) : (<p className='whatsNews__header-description'>{groupDataHandler?.description}</p>)

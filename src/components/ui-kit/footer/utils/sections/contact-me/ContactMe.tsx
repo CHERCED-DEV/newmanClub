@@ -10,14 +10,18 @@ const ContactMe: React.FC<ContactMeDataProps> = ({ contactMe }) => {
                 {
                     contactMe.channels.map((channel) => (
                         <li key={channel.label} className={styles.footerContactMeChanelsItem}>
-                            <Image
-                                className={styles.footerContactMeChanelsImg}
-                                src={channel.img.src}
-                                alt={channel.img.alt}
-                                fill={channel.img.fill}
-                                width={channel.img.width}
-                                height={channel.img.height}
-                            />
+                            {
+                                channel.img.src && (
+                                    <Image
+                                        className={styles.footerContactMeChanelsImg}
+                                        src={channel.img.src}
+                                        alt={channel.img.alt}
+                                        fill={channel.img.fill}
+                                        width={channel.img.width}
+                                        height={channel.img.height}
+                                    />
+                                )
+                            }
                             <label className={styles.footerContactMeChanelsLabel}>{channel.label}</label>
                         </li>
                     ))
@@ -27,14 +31,18 @@ const ContactMe: React.FC<ContactMeDataProps> = ({ contactMe }) => {
                 {
                     contactMe.social_media.map((media) => (
                         <li key={media.alt} className={styles.footerContactMeSocialMediaItem}>
-                            <Image
-                                className={styles.footerContactMeSocialMediaImg}
-                                src={media.src}
-                                alt={media.alt}
-                                fill={media.fill}
-                                width={media.width}
-                                height={media.height}
-                            />
+                            {
+                                media.src && (
+                                    <Image
+                                        className={styles.footerContactMeSocialMediaImg}
+                                        src={media.src}
+                                        alt={media.alt}
+                                        fill={media.fill}
+                                        width={media.width}
+                                        height={media.height}
+                                    />
+                                )
+                            }
                         </li>
                     ))
                 }

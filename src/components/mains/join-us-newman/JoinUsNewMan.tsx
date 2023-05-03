@@ -9,7 +9,7 @@ const JoinUsNewMan: React.FC<JoinUsDataProps> = ({ join_us }) => {
     const onSubmit = (data: any) => {
         console.log(data);
     };
-    
+
     return (
         <main className="join-us">
             <section className="join-us__content">
@@ -42,13 +42,17 @@ const JoinUsNewMan: React.FC<JoinUsDataProps> = ({ join_us }) => {
                 </form>
             </section>
             <section className="join-us__image">
-                <Image
-                    className='join-us__pic'
-                    src={join_us.promo.src}
-                    alt={join_us.promo.alt}
-                    width={join_us.promo.width}
-                    height={join_us.promo.height}
-                />
+                {
+                    join_us.promo.src && (
+                        <Image
+                            className='join-us__pic'
+                            src={join_us.promo.src}
+                            alt={join_us.promo.alt}
+                            width={join_us.promo.width}
+                            height={join_us.promo.height}
+                        />
+                    )
+                }
             </section>
         </main>
     );

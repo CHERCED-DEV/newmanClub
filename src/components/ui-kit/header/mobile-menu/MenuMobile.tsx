@@ -8,24 +8,28 @@ interface MenuMobileDataProps extends HeaderDataProps {
     handleSubMenu: boolean;
 }
 
-export const MenuMobile: React.FC<MenuMobileDataProps> = ({header,handleEvent,handleSubMenu}) => {
-  return (
-    <nav className={`${styles.menuMobile} ${handleSubMenu ? styles.on : styles.off}`}>
-        <button onClick={handleEvent} className=''>X</button>
-        <ul className={styles.menuMobileList}>
+export const MenuMobile: React.FC<MenuMobileDataProps> = ({ header, handleEvent, handleSubMenu }) => {
+    return (
+        <nav className={`${styles.menuMobile} ${handleSubMenu ? styles.on : styles.off}`}>
+            <button onClick={handleEvent} className=''>X</button>
+            <ul className={styles.menuMobileList}>
+                {
+                    header.options.map((option) => (
+                        <li key={option.label} className={styles.menuMobileItem}><a href={option.link}>{option.label}</a></li>
+                    ))
+                }
+            </ul>
             {
-                header.options.map((option)=>(
-                    <li key={option.label} className={styles.menuMobileItem}><a href={option.link}>{option.label}</a></li>
-                ))
+                header.menu_mobile.src && (
+                    <Image
+                        className={styles.menuMobileLogo}
+                        src={header.menu_mobile.src}
+                        alt={header.menu_mobile.alt}
+                        width={header.menu_mobile.width}
+                        height={header.menu_mobile.height}
+                    />
+                )
             }
-        </ul>
-        <Image
-            className={styles.menuMobileLogo}
-            src={header.menu_mobile.src}
-            alt={header.menu_mobile.alt}
-            width={header.menu_mobile.width}
-            height={header.menu_mobile.height}
-        />
-    </nav>
-  )
+        </nav>
+    )
 }

@@ -18,25 +18,29 @@ const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
                     <button className='the-crew__cta'>{the_crew.button}</button>
                 </section>
                 <section className='the-crew__photo'>
-                    <Image
-                        className='the-crew__photo-pic'
-                        src={the_crew.crew_img.src}
-                        alt={the_crew.crew_img.alt}
-                        width={the_crew.crew_img.width}
-                        height={the_crew.crew_img.height}
-                    />
+                    {
+                        the_crew.crew_img.src && (
+                            <Image
+                                className='the-crew__photo-pic'
+                                src={the_crew.crew_img.src}
+                                alt={the_crew.crew_img.alt}
+                                width={the_crew.crew_img.width}
+                                height={the_crew.crew_img.height}
+                            />
+                        )
+                    }
                 </section>
                 <section className='group-options'>
-                <div className='group-options-container'>
-                    {
-                        the_crew.group_options.map((group) => (
-                            <GroupOptionsCrew key={group.img.src} group_options={group} />
-                        ))
-                    }
-                </div>
-            </section>
+                    <div className='group-options-container'>
+                        {
+                            the_crew.group_options.map((group) => (
+                                <GroupOptionsCrew key={group.img.src} group_options={group} />
+                            ))
+                        }
+                    </div>
+                </section>
             </main>
-            
+
         </>
     )
 }

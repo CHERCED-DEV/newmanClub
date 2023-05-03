@@ -8,13 +8,17 @@ const CardGroup: React.FC<CardDataProps> = ({ card }) => {
         const eventCard = card as CardsEventsConfig;
         return (
             <article className='card-event'>
-                <Image
-                    className='card-pic-event'
-                    src={eventCard.background_img.src}
-                    alt={eventCard.background_img.alt}
-                    width={eventCard.background_img.width}
-                    height={eventCard.background_img.height}
-                />
+                {
+                    eventCard.background_img.src && (
+                        <Image
+                            className='card-pic-event'
+                            src={eventCard.background_img.src}
+                            alt={eventCard.background_img.alt}
+                            width={eventCard.background_img.width}
+                            height={eventCard.background_img.height}
+                        />
+                    )
+                }
                 <section className='card__info-container-event'>
                     <label className='card__info-title-event'>{eventCard.title}</label>
                     <div className='card__info-vertical-line-event'></div>
@@ -36,13 +40,17 @@ const CardGroup: React.FC<CardDataProps> = ({ card }) => {
                         <span className='card__news-year'>{newsCard.date.year}</span>
                     </div>
                 </section>
-                <Image
-                    className='card-pic'
-                    src={newsCard.background_img.src}
-                    alt={newsCard.background_img.alt}
-                    width={newsCard.background_img.width}
-                    height={newsCard.background_img.height}
-                />
+                {
+                    newsCard.background_img.src && (
+                        <Image
+                            className='card-pic'
+                            src={newsCard.background_img.src}
+                            alt={newsCard.background_img.alt}
+                            width={newsCard.background_img.width}
+                            height={newsCard.background_img.height}
+                        />
+                    )
+                }
                 <section className='card__news-blog'>
                     <p className='card__news-author'>{newsCard.blog.author}</p>
                     <span className='card__news-title'>{newsCard.blog.title}</span>
