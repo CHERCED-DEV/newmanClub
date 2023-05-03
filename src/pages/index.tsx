@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import { CmsDataConfig } from './api/customCms/database/utils.interface';
-import { GetServerSideProps } from 'next';
 import { lazy } from 'react';
+import { CmsDataConfig } from './api/customCms/database/utils.interface';
 import { getCMSData } from '../../utils/handlers/requests';
 import { Welcome } from '@/components/mains/welcome/Welcome';
 
