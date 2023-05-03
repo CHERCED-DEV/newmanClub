@@ -2,8 +2,9 @@ import Head from 'next/head'
 import { CmsDataConfig } from './api/customCms/database/utils.interface';
 import { GetServerSideProps } from 'next';
 import { lazy } from 'react';
+import { getCMSData } from '../../utils/handlers/requests';
+import { Welcome } from '@/components/mains/welcome/Welcome';
 
-const Welcome = lazy(() => import('@/components/mains/welcome/Welcome'));
 const GroupOptions = lazy(() => import('@/components/mains/group-options/GroupOptions'));
 const TheCrew = lazy(() => import('@/components/mains/the-crew/TheCrew'));
 const Memories = lazy(() => import('@/components/mains/group-options/Memories'));
@@ -11,7 +12,7 @@ const Soundtrack = lazy(() => import('@/components/mains/soundtrack/Soundtrack')
 const JoinUsNewMan = lazy(() => import('@/components/mains/join-us-newman/JoinUsNewMan'));
 
 export default function Home({ cmsData }: { cmsData: CmsDataConfig }) {
-    if(cmsData) {
+    if (cmsData) {
         return (
             <>
                 <Head>
@@ -36,12 +37,11 @@ export default function Home({ cmsData }: { cmsData: CmsDataConfig }) {
 }
 
 
-export const getServerSideProps: GetServerSideProps = async () => {
-    const res = await fetch(`${process.env.VERCEL_URL_CORS}/api/customCms`);
-    const data = await res.json();
+export async function getServerSideProps() {
+    const res = await getCMSData();
     return {
         props: {
-            cmsData: data,
+            cmsData: res,
         },
     };
 };

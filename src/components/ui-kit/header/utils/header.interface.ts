@@ -6,14 +6,14 @@ interface OptionsHeaderConfig {
 }
 
 export interface HeaderConfig {
-    newman_logo: ImgConfig,
-    options: OptionsHeaderConfig[],
+    newman_logo: ImgConfig;
+    options: OptionsHeaderConfig[];
     about: {
-        church_name: string,
-        social_Logo: ImgConfig[],
-    },
-    mobile_icon: ImgConfig,
-    menu_mobile: ImgConfig
+        church_name: string;
+        social_Logo: ImgConfig[];
+    };
+    mobile_icon: ImgConfig;
+    menu_mobile: ImgConfig;
 }
 
 export interface HeaderDataProps {

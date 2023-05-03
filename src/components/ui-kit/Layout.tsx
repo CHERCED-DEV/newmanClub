@@ -1,5 +1,4 @@
-import React, { ReactNode, Suspense, lazy, memo, useEffect, useState } from 'react';
-import { useLocalStorageData } from '../../../utils/hooks/getLocalStorageData';
+import React, { ReactNode, Suspense, lazy, memo, useCallback, useEffect, useState } from 'react';
 import { LayoutCmsConfig } from './utils/layout.interface';
 
 interface LayOutDataProps {
@@ -12,11 +11,22 @@ const Header = lazy(() => import("./header/Header"));
 const Footer = lazy(() => import("./footer/footer"));
 
 const Layout: React.FC<LayOutDataProps> = ({ children }) => {
-
-    const [layoutData] = useLocalStorageData<LayoutCmsConfig>("cmsData", "layout");
+    const [layoutData, setLayoutData] = useState<LayoutCmsConfig>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [initialStorageValue, setInitialStorageValue] = useState<boolean>(false);
-    console.log(Layout)
+
+    const getLayoutData = useCallback(async () => {
+        const data = await fetch("/api/customCms");
+        const res = await data.json();
+        if (data !== null) {
+            setLayoutData(res.layout)
+        }
+    }, [])
+
+    useEffect(() => {
+        getLayoutData();
+    }, [getLayoutData])
+
     useEffect(() => {
         const storedValue = window.sessionStorage.getItem('isLoading');
         if (storedValue !== null) {
