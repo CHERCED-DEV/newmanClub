@@ -31,6 +31,9 @@ export const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
         };
     }, []);
 
+    const handleVideoLoad = () => {
+        setVideoLoaded(true);
+    };
 
     return (
         <>
@@ -43,7 +46,7 @@ export const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
                                 autoPlay={true}
                                 muted={true}
                                 playsInline={true}
-                                onLoadedData={() => setVideoLoaded(true)}
+                                onLoadedData={handleVideoLoad}
                                 className="welcome__video">
                                 <source src={welcome.video.dsk.src} type="video/mp4" />
                                 {welcome.video.dsk.alert}<code>video</code>.
@@ -54,7 +57,7 @@ export const Welcome: React.FC<WelcomeDataProps> = ({ welcome }) => {
                                 autoPlay={true}
                                 muted={true}
                                 playsInline={true}
-                                onLoadedData={() => setVideoLoaded(true)}
+                                onLoadedData={handleVideoLoad}
                                 className="welcome__video">
                                 <source src={welcome.video.mob.src} type="video/mp4" />
                                 {welcome.video.mob.alert}<code>video</code>.
