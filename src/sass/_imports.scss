@@ -1,8 +1,4 @@
-@import "./vars/vars-mediaqueries";
-@import "./vars/vars-zindex";
-@import "./vars/vars-colors";
-@import "./vars/vars-typography";
-@import "./vars/mixins/mixins";
+@import "./vars-import";
 
 //utils:
 @import "./components/utils/loaders/starterApp";

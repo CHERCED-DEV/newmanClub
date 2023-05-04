@@ -53,8 +53,10 @@
     .join-us__img-v {
         background-color: $secundary-button;
         border-radius: calculateRem(15px);
+
         &.on {
             background: transparent;
+
             &:hover {
                 transform: none;
                 animation: none;
@@ -99,20 +101,49 @@
     text-align: left;
 }
 
+.welcome__bg-sk,
 .welcome__bg-mb {
     width: 100%;
-    height: calculateRem(768px);
-    background-image: url("../../../../../public/assets/utils/videoLoaderMob.jpg");
+    height: 100vh;
+    background-color: #f5f5f5;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+}
+
+.welcome__bg-mb {
+    background-image: url("../../../../../public/assets/utils/videoLoaderMob.jpg");
 }
 
 .welcome__bg-sk {
+    background-image: url("../../../../../public/assets/utils/videoLoaderDsk.jpg");
+}
+
+.welcome__bg-sk::before,
+.welcome__bg-mb::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../../../../../public/assets/utils/videoLoaderDsk.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+    opacity: 0.8;
+    animation: colorChange 1.9s ease-in-out infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
