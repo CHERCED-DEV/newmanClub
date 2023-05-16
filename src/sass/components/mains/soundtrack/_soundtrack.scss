@@ -32,6 +32,7 @@
 }
 .soundtrack__title-container {
     @include container-wrap();
+    max-width: calculateRem(360px);
     position: absolute;
     bottom: calculateRem(28px);
     

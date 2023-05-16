@@ -11,7 +11,7 @@ interface MenuMobileDataProps extends HeaderDataProps {
 export const MenuMobile: React.FC<MenuMobileDataProps> = ({ header, handleEvent, handleSubMenu }) => {
     return (
         <nav className={`${styles.menuMobile} ${handleSubMenu ? styles.on : styles.off}`}>
-            <button onClick={handleEvent} className=''>X</button>
+            <button onClick={handleEvent} className={styles.menuMobileBack}>X</button>
             <ul className={styles.menuMobileList}>
                 {
                     header.options.map((option) => (

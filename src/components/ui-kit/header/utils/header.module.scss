@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    height: 100%;
 }
 
 .headerContainer {
@@ -15,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .headerLogo {}
@@ -62,7 +64,7 @@
     position: fixed;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: $c-brand-primary;
     width: 100%;
     height: 100vh;
@@ -88,6 +90,15 @@
     }
 }
 
+.menuMobileBack {
+    width: calculateRem(25px);
+    height: calculateRem(25px);
+    background-color: transparent;
+    border-radius: 100vh;
+    margin-left: auto;
+    margin-right: calculateRem(60px);
+    color: white;
+}
 .menuMobileList {
     @include container-wrap;
     display: flex;
@@ -100,17 +111,57 @@
     margin: calculateRem(20px);
 
     a {
+        color: white;
         text-decoration: none;
+        &:hover {
+            font-weight: $f-weight-bold;
+        }
     }
 }
 
 .menuMobileLogo {
-
+    margin-bottom: calculateRem(45px);
 }
 
 @media screen and (min-width: $bp-tablet-landscape-min) {
+    .header {
+        max-height: calculateRem(118px);
+    }
     .floatMenuNavegation {
         display: none;
+    }
+    .headerButtonMob {
+        display: none;
+    }
+    .headerLogoImage {
+        width: calculateRem(195px);
+    }
+    .headerNav {
+        width: 100%;
+    }
+    .headerNavList {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: calculateRem(181px);
+    }
+    .headerNavItem {
+        @include font-size($f-size-md);
+        font-family: $f-body;
+        text-transform: uppercase;
+        font-weight: $f-weight-bold;
+        margin-right: calculateRem(44px);
+        a {
+            text-decoration: none;    
+        }
+        a:hover {
+            font-weight: $f-weight-bold;
+        }
+    }
+    .headerAbout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -130,6 +181,7 @@
     headerImag: headerImag;
 
     menuMobile: menuMobile;
+    menuMobileBack: menuMobileBack;
     menuMobileList: menuMobileList;
     menuMobileItem: menuMobileItem;
     menuMobileLogo: menuMobileLogo;
