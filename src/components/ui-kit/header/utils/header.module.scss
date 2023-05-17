@@ -52,9 +52,7 @@
     // Estilos para la etiqueta...
 }
 
-.headerImages {
-    // Estilos para las imágenes...
-}
+
 
 .headerImag {
     // Estilos para cada imagen...
@@ -99,6 +97,7 @@
     margin-right: calculateRem(60px);
     color: white;
 }
+
 .menuMobileList {
     @include container-wrap;
     display: flex;
@@ -113,6 +112,7 @@
     a {
         color: white;
         text-decoration: none;
+
         &:hover {
             font-weight: $f-weight-bold;
         }
@@ -127,43 +127,83 @@
     .header {
         max-height: calculateRem(118px);
     }
+
     .floatMenuNavegation {
         display: none;
     }
+
     .headerButtonMob {
         display: none;
     }
+
     .headerLogoImage {
         width: calculateRem(195px);
     }
+
     .headerNav {
         width: 100%;
+        margin-left: calculateRem(181px);
     }
+
     .headerNavList {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-left: calculateRem(181px);
+
     }
+
     .headerNavItem {
-        @include font-size($f-size-md);
+        @include font-size($f-size);
         font-family: $f-body;
         text-transform: uppercase;
         font-weight: $f-weight-bold;
         margin-right: calculateRem(44px);
+
         a {
-            text-decoration: none;    
+            text-decoration: none;
         }
+
         a:hover {
-            font-weight: $f-weight-bold;
+            text-decoration: underline;
         }
     }
+
+}
+
+@media screen and (min-width: $bp-desktop-min) {
     .headerAbout {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: calculateRem(337px);
+    }
+    .headerLabel {
+        @include font-size($f-size);
+        font-family: $f-body;
+        font-weight: $f-weight-bold;
+        text-transform: uppercase;
+        padding: calculateRem(12px);
+        margin-right: calculateRem(20px);
+        background-color: $secundary-button;
+        border-radius: 100vh;
+        min-width: calculateRem(200px);
+        text-align: center;
+    }
+    .headerImages {
+        display: none;
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .headerImages {
+        display: flex;
+
+        :first-child {
+            margin-right: calculateRem(25px);
+        }
+    }
+}
+
 
 :export {
     header: header;
@@ -185,6 +225,6 @@
     menuMobileList: menuMobileList;
     menuMobileItem: menuMobileItem;
     menuMobileLogo: menuMobileLogo;
-    on:on;
-    off:off;
+    on: on;
+    off: off;
 }

@@ -41,14 +41,14 @@ export const cms: CmsDataConfig = {
                     {
                         src: "/assets/logos/instagram-logo.svg",
                         alt: "instagram",
-                        width: 44,
-                        height: 46,
+                        width: 45,
+                        height: 45,
                     },
                     {
                         src: "/assets/logos/facebook-logo.svg",
                         alt: "facebook",
-                        width: 44,
-                        height: 46,
+                        width: 45,
+                        height: 45,
                     },
                 ],
             },
