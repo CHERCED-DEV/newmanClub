@@ -136,13 +136,11 @@
         display: none;
     }
 
-    .headerLogoImage {
-        width: calculateRem(195px);
-    }
+    
 
     .headerNav {
         width: 100%;
-        margin-left: calculateRem(181px);
+        margin-left: calculateRem(60px);
     }
 
     .headerNavList {
@@ -171,6 +169,12 @@
 }
 
 @media screen and (min-width: $bp-desktop-min) {
+    .headerLogoImage {
+        width: calculateRem(195px);
+    }
+    .headerNav {
+        margin-left: calculateRem(181px);
+    }
     .headerAbout {
         display: flex;
         justify-content: center;
