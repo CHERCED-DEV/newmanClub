@@ -99,13 +99,13 @@ export const cms: CmsDataConfig = {
                 ],
                 social_media: [
                     {
-                        src: "/assets/logos/instagram-logo.svg",
+                        src: "/assets/logos/instagram-logoW.svg",
                         alt: "instagram",
                         width: 50,
                         height: 50,
                     },
                     {
-                        src: "/assets/logos/facebook-logo.svg",
+                        src: "/assets/logos/facebook-logoW.svg",
                         alt: "facebook",
                         width: 50,
                         height: 50,
@@ -145,7 +145,7 @@ export const cms: CmsDataConfig = {
                 height: 86,
             },
             onPause: {
-                src: "/assets/logos/mainPlay-video.svg",
+                src: "/assets/logos/mainPause-video.png",
                 alt: "onPause",
                 width: 48,
                 height: 86,

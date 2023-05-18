@@ -33,7 +33,7 @@
     font-family: $f-subtitle;
     text-align: center;
     line-height: 1.8;
-    
+    max-width: calculateRem(535px);
 }
 
 // newsletter
@@ -58,6 +58,7 @@
 .footerNewsLetterInput {
     @include regularInput();
     margin-bottom: calculateRem(15px);
+    max-width: calculateRem(500px);
 }
 
 .footerNewsLetterSubmit {
@@ -121,6 +122,44 @@
 
 .footerCopyRigthPoweredBy {
     
+}
+
+@media screen and (min-width: $bp-mobile) {
+    .footer {
+        padding-top: 200px;
+    }
+}
+@media screen and (min-width:$bp-tablet-landscape-min) {
+    .footer {
+        padding-top: 100px;
+        background-image: url("../../../../../public/assets/utils/fotterDsk.png");
+    }
+    .footerContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footerNewManRm {
+        width: 100%;
+    }
+    .footerNewsLetter {
+        width: 75%;
+    }
+}
+@media screen and (min-width: $bp-desktop-min) {
+    .footerNewManDescription {
+        @include font-size(26px);
+    }
+    .footerContactMe,
+    .footerNewsLetter,
+    .footerNewManRm {
+        width: 33%;
+    }
+    .footerNewsLetter {
+        order: 3;
+    }
+    .footerContactMe {
+        order: 2;
+    }
 }
 
 

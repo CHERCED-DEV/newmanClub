@@ -103,7 +103,7 @@
     padding-left: calculateRem(15px);
     text-align: left;
 }
-
+.welcome__bg-sk,
 .welcome__bg-mb {
     width: 100%;
     object-fit: cover;
@@ -147,5 +147,37 @@
 
     100% {
         background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+@media screen and (min-width: calculateRem($bp-tablet-landscape-max)) {
+    .welcome {  
+        max-height: 100vh;
+    }
+    .join-us__content-v {
+        right: calculateRem(139px);
+    }
+    .welcome__play  {
+        position: absolute;
+        display: block;
+        bottom: calculateRem(57px);
+        right: 50%;
+        background: transparent;
+        border: none;
+    }
+    .join-us__image-v {
+        display: block;
+        position: absolute;
+        bottom: 144px;
+        right: 139px;
+        background: $c-brand-secundary;
+        width: 98px;
+        height: 98px;
+        border-radius: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            margin-top: calculateRem(5px);
+        }
     }
 }
