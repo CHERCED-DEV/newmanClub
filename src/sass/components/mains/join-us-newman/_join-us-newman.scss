@@ -1,19 +1,21 @@
 .join-us {
     background: $c-joinus-bg;
+    height: 100%;
+}
+.join-us__wrapper {
+    @include container-wrap();
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
 }
-.join-us__content {
-    @include container-wrap();
-}
+
 .join-us__title {
     @include font-size(57px);
     color: $t-join-color;
     font-weight: $f-weight-normal;
     margin-top: calculateRem(40px);
     margin-bottom: calculateRem(17px);
+
     &::after {
         content: "us.";
         color: $c-brand-secundary;
@@ -21,32 +23,40 @@
         margin-left: calculateRem(15px);
     }
 }
+
 .join-us__description {
-    color: $p-join-color; 
+    color: $p-join-color;
     line-height: 1.5;
-    padding-right: calculateRem(50px);
+    padding-right: 18%;
     padding-bottom: calculateRem(30px);
 }
+
 .join-us__form {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     align-items: center;
     padding-bottom: calculateRem(70px);
+    width: 100%;
+    max-width: calculateRem(670px);
 }
+
 .join-us__input {
     @include regularInput($ct: $input-color2);
     margin-bottom: calculateRem(8px);
     box-shadow: none;
 }
+
 .join-us__textarea {
     @include regularInput($h: 192px, $fs: 16px, $ct: $input-color2);
     padding-top: calculateRem(20px);
     margin-bottom: calculateRem(8px);
     box-shadow: none;
 }
+
 .join-us__button {
     @include regularButton($w: 222px);
 }
+
 .join-us__image {
     margin-top: -140px;
     order: -1;
@@ -57,3 +67,80 @@
     height: calculateRem(260px);
 }
 
+@media screen and (min-width: $bp-tablet-portrait-max) {
+    .join-us__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: calculateRem(674px);
+    }
+    .join-us__description {
+        padding-right: 0;
+    }
+    .join-us__textarea {
+        height:calculateRem(117px);
+        margin-bottom: calculateRem(22px);
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .join-us__wrapper  {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .join-us__content {
+        order: 1;
+    }
+    .join-us__image {
+        order: 2;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1248px) {
+    .join-us__title {
+        @include font-size(107px);
+        width: 100%;
+        text-align: left;
+    }
+    .join-us__description {
+        @include font-size($f-size-md-xl);
+        margin-right: 10%;
+    }
+}
+@media screen and (min-width: 1248px) {
+   .join-us__pic {
+    width: calculateRem(498px);
+    height: calculateRem(390px);
+   }
+}
+@media screen and (min-width: 1440px) {
+    .join-us__pic {
+     width: calculateRem(598px);
+     height: calculateRem(468px);
+    }
+}
+@media screen and (min-width: 1440px) {
+    .join-us__pic {
+        width: calculateRem(598px);
+        height: calculateRem(468px);
+    }
+}
+@media screen and (min-width: 1640px) {
+    .join-us {
+        background-color: $c-joinus-banner-bg;
+    }
+    .join-us__wrapper {
+        border-radius: calculateRem(46px);
+        background-color: $c-soundtrack-bg-b;
+        margin-top: calculateRem(140px);
+        margin-bottom: calculateRem(98px);
+    }
+    .join-us__pic {
+        width: calculateRem(777px);
+        height: calculateRem(608px);
+    }
+}
