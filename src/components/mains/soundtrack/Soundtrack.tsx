@@ -29,13 +29,13 @@ const Soundtrack: React.FC<SoundtrackDataProps> = ({ soundtrack }) => {
                             />
                         )
                     }
-                </div>
-                <div className='soundtrack__title-container'>
+                    <div className='soundtrack__title-container'>
                     {
                         soundtrack.title.map((title) => (
                             <p key={title} className='soundtrack__title'>{title}</p>
                         ))
                     }
+                </div>
                 </div>
             </section>
         </article>

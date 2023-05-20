@@ -1,16 +1,16 @@
 .soundtrack {
     background: $c-soundtrack-bg-b;
-    padding-bottom: calculateRem(229px);
-}
-.soundtrack__banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: calculateRem(229px);
     background: linear-gradient(298deg, #2ac5b6, #000000, #2ac5b6, #000000);
     background-size: 800% 800%;
     -webkit-animation: soundtrack-bg 25s ease infinite;
     -moz-animation: soundtrack-bg 25s ease infinite;
     animation: soundtrack-bg 25s ease infinite;
+}
+.soundtrack__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
 .soundtrack__pl-pic {
@@ -23,9 +23,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 100vw;
 }
 .soundtrack__banner-pic {
-    width: calculateRem(428px);
     height: calculateRem(455px);
     object-fit: cover;
     max-width: 100%;
@@ -34,8 +36,7 @@
     @include container-wrap();
     max-width: calculateRem(360px);
     position: absolute;
-    bottom: calculateRem(28px);
-    
+    bottom: calculateRem(28px);    
 }
 .soundtrack__title {
     @include font-size(56px);
@@ -44,8 +45,7 @@
     line-height: 1;
     &:last-child {
         text-align: right;
-        margin-right: calculateRem(10px);
-        
+        margin-right: calculateRem(10px);        
     }
 }
 
@@ -53,6 +53,48 @@
     .soundtrack__title:last-child {
             @include font-size($f-size-xxlg);
         }
+}
+@media screen and (min-width: $bp-mobile) {
+    .soundtrack__banner-pic {
+        height: 100%;
+    }
+}
+@media screen and (min-width: calculateRem(1080px)) {
+    .soundtrack {
+        margin-bottom: 0;
+    }
+    .soundtrack__title {
+        @include font-size(80px);
+        width: 100%;
+    }
+}
+@media screen and (min-width: calculateRem(1248px)) {
+    .soundtrack__banner {
+        flex-direction: row;
+    }
+    .soundtrack__pl-pic {
+        order: 2;
+        width: calculateRem(374px);
+        height: calculateRem(482px);
+        margin-top: calculateRem(134px);
+        margin-left: calculateRem(44px);
+        margin-bottom: 0;
+    }
+    .soundtrack__banner-img {
+        max-width: calculateRem(1100px);
+    }
+    .soundtrack__title-container {
+        max-width: calculateRem(580px);
+        transform: translateX(50%);
+    }
+    .soundtrack__banner-img {
+        align-items: flex-start;
+    }
+}
+@media screen and (min-width: calculateRem(1640px)) {
+    .soundtrack__banner {
+        margin-top: calculateRem(-132px);
+    }
 }
 
 @-webkit-keyframes soundtrack-bg {
