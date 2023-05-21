@@ -153,6 +153,9 @@
 }
 
 @media screen and (min-width: calculateRem(1080px)) {
+    .whatsNews__header-title {
+        @include font-size(60px);
+    }
     .card {
         max-width: calculateRem(398px);
 

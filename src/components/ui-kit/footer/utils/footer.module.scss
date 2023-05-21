@@ -126,11 +126,6 @@
     
 }
 
-@media screen and (min-width: $bp-mobile) {
-    .footer {
-        padding-top: 200px;
-    }
-}
 @media screen and (min-width:$bp-tablet-landscape-min) {
     .footer {
         padding-top: 100px;
@@ -139,6 +134,7 @@
     .footerContainer {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .footerNewManRm {
         width: 100%;
@@ -148,8 +144,9 @@
     .footerNewManDescription {
         line-height: 1.3;
     }
+    .footerContactMe,
     .footerNewsLetter {
-        width: 75%;
+        width: 50%;
     }
 }
 @media screen and (min-width: $bp-desktop-min) {

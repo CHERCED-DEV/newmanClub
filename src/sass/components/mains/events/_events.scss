@@ -10,6 +10,8 @@
     font-family: $f-subtitle;
     text-transform: uppercase;
     font-weight: $f-weight-bold;
+    border-radius: 0 0 calculateRem(46px) calculateRem(46px);
+    box-shadow: $border-regular;
 }
 
 .events__header {
@@ -111,4 +113,18 @@
 
 .events__footer-button {
     @include regularButton($w: 241px, $h: 55px, $br: 28px);
+}
+
+@media screen and (min-width: $bp-tablet-landscape-max) {
+    .events__header-title {
+        @include font-size(48px);
+    }
+    .events__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .events__item {
+        margin: calculateRem(8px);
+    }
 }
