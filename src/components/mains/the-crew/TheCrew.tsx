@@ -9,12 +9,27 @@ const TheCrew: React.FC<TheCrewDataProps> = ({ the_crew }) => {
         <>
             <main className='the-crew'>
                 <section className='the-crew__intro'>
+                    <div className='the-crew__intro-header'>
                     <h2 className='the-crew__title'>{the_crew.title}</h2>
                     {
                         the_crew.description.map((dest) => (
                             <p key={dest} className='the-crew__description'>{dest}</p>
                         ))
                     }
+                    </div>
+                    <div className='the-crew__pic-container'>
+                    {
+                        the_crew.crew_img.src && (
+                            <Image
+                                className='the-crew__pic'
+                                src={the_crew.crew_img.src}
+                                alt={the_crew.crew_img.alt}
+                                width={the_crew.crew_img.width}
+                                height={the_crew.crew_img.height}
+                            />
+                        )
+                    }
+                    </div>
                     <button className='the-crew__cta'>{the_crew.button}</button>
                 </section>
                 <section className='the-crew__photo'>

@@ -1,12 +1,15 @@
 .whatsNews {
-    @include container-wrap();
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background: linear-gradient(to bottom, #215888, #27B7AF);
     clip-path: ellipse(185% 50% at 50% 50%);
     padding-top: calculateRem(20px);
     color: $default-text1;
+}
+
+.whatsNews__container {
+    @include container-wrap();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .whatsNews__header {
@@ -40,6 +43,7 @@
     flex-direction: column;
     width: 100%;
 }
+
 .whatsNews__item {
     width: 100%;
     text-align: center;
@@ -56,6 +60,7 @@
     align-items: center;
     max-width: calculateRem(354px);
     width: 100%;
+
     &::after {
         content: "";
         background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%);
@@ -145,4 +150,72 @@
     @include regularButton($w: 210px, $h: 41px);
     margin-top: calculateRem(15px);
     margin-bottom: calculateRem(90px);
+}
+
+@media screen and (min-width: calculateRem(1080px)) {
+    .card {
+        max-width: calculateRem(398px);
+
+        &::after {
+            max-width: calculateRem(398px);
+        }
+
+        &:hover {
+            .card__news-description {
+                display: block;
+                text-align: justify;
+                margin-top: calculateRem(22px);
+            }
+
+            .card__news-button {
+                display: block;
+                @include regularButton($w: 210px, $h: 41px, $bg: $secundary-button, $ct: $wn-bg-gradient-one);
+                margin-top: calculateRem(22px);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .card-pic {
+        max-width: calculateRem(398px);
+        min-width: calculateRem(398px);
+        height: calculateRem(528px);
+    }
+
+    .card__news-blog {
+        width: 100%;
+        padding: 0 calculateRem(34px);
+    }
+
+    .card__news-author,
+    .card__news-title {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: calculateRem(1248px)) {
+    .whatsNews__container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .whatsNews__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: inherit;
+        max-width: calculateRem(1640px);
+    }
+
+    .whatsNews__item {
+        width: auto;
+        margin-right: calculateRem(16px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
 }

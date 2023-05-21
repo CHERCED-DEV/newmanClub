@@ -29,6 +29,7 @@ const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                 groupDataHandler && (
                     <>
                         <section className={type ? ("events") : ("whatsNews")}>
+                            <div className={type ? ("events__container") : ("whatsNews__container")}>
                             <header className={type ? ("events__header") : ("whatsNews__header")}>
                                 {
                                     groupDataHandler.main_logo.src && (
@@ -80,6 +81,7 @@ const GroupOptions: React.FC<GroupOptionsDataProps> = ({ gData }) => {
                                 }
                                 <button className={type ? ("events__footer-button") : ("whatsNews__footer-button")}>{groupDataHandler?.button}</button>
                             </footer>
+                            </div>
                         </section>
                     </>
                 )
